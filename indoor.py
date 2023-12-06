@@ -1,2 +1,3 @@
 str = input()
-print(lower(str))
+print(str.lower())
+
