@@ -5,17 +5,20 @@ i=0
 j=0
 while i < len(str):
     j=0
-    Flag = False
+    flag = False
+
+
     while j < len(vowels):
         if str[i].lower == vowels[j]:
-            Flag = False
+            flag = True
+            break
         else:
-            Flag = True
-        break
+            flag = False
+            break
         j+=1
-    if Flag:
+
+    if flag:
         print(str[i],end="")
-    else:
-        print("")
+
     i+=1
 
