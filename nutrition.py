@@ -5,7 +5,7 @@ def main():
         {"Name":"apple","Calories":"130"},
         {"Name":"avocado","Calories":"50"},
         {"Name":"banana","Calories":"110"},
-        {"Name":"Kiwifruit","Calories":"90"},
+        {"Name":"kiwifruit","Calories":"90"},
         {"Name":"pear","Calories":"100"},
         {"Name":"sweet cherries","Calories":"100"}
     ]
