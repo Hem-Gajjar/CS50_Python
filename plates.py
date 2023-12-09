@@ -22,11 +22,16 @@ def is_valid(s):
     if(i == len(s)-1):
         alphabets = s[0:index_where_num_start]
         numbers = s[index_where_num_start:len(s)]
+        if len(s) >= 2 and len(s) <= 6:
+            if alphabets[0].isalpha() and alphabets[1].isalpha()
+        else:
+            flag = False
     else:
        flag = False
 
-    print(alphabets)
-    print(numbers)
+
+
+
     return False
 main()
 
