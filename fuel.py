@@ -17,23 +17,18 @@ def get_fraction():
             d = array[2]
             # print(n)
             # print(d)
-            if is_float(n):
+            if isinstance(n,float):
                 continue
-            if is_float(d):
+            if isinstance(n,float):
                 continue
-            return int(n)/int(d)
+            return int(n)*100/int(d)
         except ValueError:
             pass
         except ZeroDivisionError:
             pass
 
 
-def is_float(x):
 
-    if x.replace(".","").isnumeric():
-        return True
-    else:
-        return False
 
 
 main()
