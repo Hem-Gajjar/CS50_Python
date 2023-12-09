@@ -21,7 +21,7 @@ def get_fraction():
                 continue
             if isinstance(n,float):
                 continue
-            return int(n)*100/int(d)
+            return (int(n)/int(d))*100
         except ValueError:
             pass
         except ZeroDivisionError:
