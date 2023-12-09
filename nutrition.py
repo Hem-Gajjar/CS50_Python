@@ -1,6 +1,6 @@
 def main():
     food = input("Item: ")
-    food = food.strip()
+
     table = [
         {"Name":"apple","Calories":"130"},
         {"Name":"avocado","Calories":"50"},
