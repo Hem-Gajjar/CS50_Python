@@ -11,9 +11,11 @@ def get_fraction():
     while True:
         try:
             f = input("Fraction: ")
-            
-
-
+            array = (f.partition("/"))
+            n = array[0]
+            d = array[2]
+            print(n)
+            print(d)
 
         except ValueError:
             pass
