@@ -9,3 +9,14 @@ menu = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
+i=0
+j=0
+while true:
+    try:
+        item = input()
+        for i in menu:
+            
+    except EOFError:
+        break
+
+
