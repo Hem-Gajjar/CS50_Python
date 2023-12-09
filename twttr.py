@@ -8,12 +8,14 @@ while i < len(str):
     Flag = False
     while j < len(vowels):
         if str[i].lower == vowels[j]:
-            print("")
+            Flag = False
         else:
             Flag = True
-            break
+        break
         j+=1
     if Flag:
         print(str[i],end="")
+    else:
+        print("")
     i+=1
 
