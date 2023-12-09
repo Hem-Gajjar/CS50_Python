@@ -11,10 +11,13 @@ while i < len(str):
     while j < len(vowels):
         # print(str[i],vowels[j],sep="-")
         if str[i].lower() == vowels[j]:
+            flag = True
             break
         else:
             print(str[i],end="")
             break
         j+=1
+
+
     i+=1
 
