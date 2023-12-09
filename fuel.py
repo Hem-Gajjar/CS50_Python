@@ -16,6 +16,8 @@ def get_fraction():
             d = array[2]
             print(n)
             print(d)
+            if n.isdecimal():
+                continue
 
         except ValueError:
             pass
