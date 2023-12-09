@@ -23,7 +23,7 @@ def is_valid(s):
         alphabets = s[0:index_where_num_start]
         numbers = s[index_where_num_start:len(s)]
         if len(s) >= 2 and len(s) <= 6:
-            if alphabets[0].isalpha() and alphabets[1].isalpha():
+            if len(alphabets) >= 2 and alphabets[0].isalpha() and alphabets[1].isalpha():
                 if numbers[0] != "0":
                     flag = True
                 else:
