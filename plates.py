@@ -12,8 +12,15 @@ def is_valid(s):
     flag = True
     if length >= 2 or length <= 6:
         if s[0].isalpha() or s[1].isalpha():
-            while i < length
+            while str[i].isalpha():
+                i+=1
+            i+=1
+            while str[i].isnumeric():
+                i+=1
+            if i = length-1:
                 
+            else:
+                flag = False
         else:
             flag = False
     else:
