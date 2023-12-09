@@ -11,10 +11,10 @@ def get_fraction():
     while True:
         try:
             f = input("Fraction: ")
-
-
-
             
+
+
+
         except ValueError:
             pass
         except ZeroDivisionError:
