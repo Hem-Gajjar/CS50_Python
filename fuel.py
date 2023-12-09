@@ -18,7 +18,7 @@ def get_fraction():
             print(d)
             if n.isdecimal():
                 continue
-
+            
         except ValueError:
             pass
         except ZeroDivisionError:
