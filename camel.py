@@ -4,7 +4,7 @@ while i < len(str):
 
     if (str[i].isupper()):
         print("_",end="")
-    str[i] = str[i].lower()
-    print(str[i],end="")
+
+    print(str[i].lower(),end="")
     i+=1
 print()
