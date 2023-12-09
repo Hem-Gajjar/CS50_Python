@@ -6,18 +6,18 @@ def main():
     elif(x==0):
         print("E")
     else:
-        print(f"{x}%",end="")
+        print(f"{x}%")
 def get_fraction():
     while True:
         try:
             f = input("Fraction: ")
-            n = int(f[0])
-            d = int(f[2])
+            n = f[0]
+            d = f[2]
             # print(n)
             # print(d)
-            x = n/d
+            x = int(n)/int(d)
             # print(x)
-            return (x)
+            return (x*100)
         except ValueError:
             pass
         except ZeroDivisionError:
