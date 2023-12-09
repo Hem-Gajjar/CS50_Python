@@ -23,7 +23,7 @@ def is_valid(s):
 
 
 
-    if s.isalnum():
+    if not(s.isalnum()):
          if(i == len(s)-1):
             alphabets = s[0:index_where_num_start]
             numbers = s[index_where_num_start:len(s)]
