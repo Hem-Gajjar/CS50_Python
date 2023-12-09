@@ -15,9 +15,9 @@ def get_fraction():
             d = f[2]
             # print(n)
             # print(d)
-            x = int(n)/int(d)
+            x = int(n)*100/int(d)
             # print(x)
-            return (x*100)
+            return (x)
         except ValueError:
             pass
         except ZeroDivisionError:
