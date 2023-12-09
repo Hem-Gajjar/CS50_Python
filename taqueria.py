@@ -11,11 +11,14 @@ menu = {
 }
 i=0
 j=0
-while true:
+sum=0
+while True:
     try:
-        item = input()
+        item = input("Item: ")
         for i in menu:
-            
+            if i == item:
+              sum  += int(menu[i])
+
     except EOFError:
         break
 
