@@ -29,10 +29,10 @@ def get_fraction():
 
 
 def is_float(x):
-    try:
-        x.replace(".","").isnumeric()
+
+    if x.replace(".","").isnumeric():
         return True
-    except ValueError:
+    else:
         return False
 
 
