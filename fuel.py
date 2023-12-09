@@ -1,6 +1,11 @@
 def main():
     x = get_fraction()
-    print(x)
+    if(x==100)
+        print("F")
+    elif(x==0)
+        print("E")
+    else
+        print(f"{x}")
 def get_fraction():
     while True:
         try:
