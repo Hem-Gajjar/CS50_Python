@@ -17,6 +17,7 @@ def is_valid(s):
     if s[0].isnumeric() or s[1].isnumeric():
         flag =  False
     else:
+        
         while s[i].isalpha():
             i+=1
         i+=1
@@ -24,5 +25,7 @@ def is_valid(s):
             i+=1
         if(i >= len(s)):
             flag = False
+        else:
+            flag = True
     return flag
 main()
