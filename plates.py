@@ -7,15 +7,19 @@ def main():
 
 
 def is_valid(s):
-
+    i=0
     length = len(s)
-
-    if length >= 2 or length <= 6
-        
+    flag = True
+    if length >= 2 or length <= 6:
+        if s[0].isalpha() or s[1].isalpha():
+            while i < length
+                
+        else:
+            flag = False
     else:
-        return False
+        flag = False
 
-
+    return flag
 
 
 
