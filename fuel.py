@@ -1,10 +1,10 @@
 def main():
     x = get_fraction("Fraction: ")
-    print(f"{x}%")
+
 def get_fraction(prompt):
     while True:
         try:
-            return (int(input(prompt))*100)
+            return float(input(prompt))
         except ValueError:
             pass
         except ZeroDivisionError:
