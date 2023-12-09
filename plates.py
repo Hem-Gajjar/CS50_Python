@@ -37,8 +37,7 @@ def is_valid(s):
 
 
 
-    if s.isalpha():
-        flag = False
+
 
 
 
