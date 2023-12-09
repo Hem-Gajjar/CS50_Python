@@ -12,7 +12,10 @@ def is_valid(s):
     if 2 < length < 6
         return False
     else
-        if 
+        if s[0].isnumeric() or s[1].isnumeric()
+            return False
+        else
+            
 
 
 main()
