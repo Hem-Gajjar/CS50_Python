@@ -1,11 +1,11 @@
 def main():
     x = get_fraction()
     x = int(x)
-    if(x==100)
+    if(x==100):
         print("F")
-    elif(x==0)
+    elif(x==0):
         print("E")
-    else
+    else:
         print(f"{x}")
 def get_fraction():
     while True:
@@ -13,8 +13,8 @@ def get_fraction():
             f = input("Fraction: ")
             n = f[0]
             d = f[2]
-            print(n)
-            print(d)
+            # print(n)
+            # print(d)
             x = int(n)/int(d)
             # print(x)
             return (x*100)
