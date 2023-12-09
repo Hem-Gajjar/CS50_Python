@@ -7,29 +7,49 @@ def main():
 
 
 def is_valid(s):
-    i=0
-    length = len(s)
-    flag = True
-    if length >= 2 or length <= 6:
-        if s[0].isalpha() or s[1].isalpha():
-            while s[i].isalpha():
-                i+=1
-            while s[i].isnumeric() and i < length-1:
-                i+=1
-            if i < length:
-                if s.isalnum():
-                    flag = True
-                else:
-                    flag = False
-            else:
-                flag = False
-            flag = True
-        else:
-            flag = False
-    else:
-        flag = False
 
-    return flag
+    i = 0
+    while i < len(s)
+    
+
+
+main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # i=0
+    # length = len(s)
+    # flag = True
+    # if length >= 2 or length <= 6:
+    #     if s[0].isalpha() or s[1].isalpha():
+    #         while s[i].isalpha():
+    #             i+=1
+    #         while s[i].isnumeric() and i < length-1:
+    #             i+=1
+    #         if i < length:
+    #             if s.isalnum():
+    #                 flag = True
+    #             else:
+    #                 flag = False
+    #         else:
+    #             flag = False
+    #         flag = True
+    #     else:
+    #         flag = False
+    # else:
+    #     flag = False
+
+    # return flag
 
 
 
@@ -75,4 +95,4 @@ def is_valid(s):
     #     else:
     #         flag = True
     # return flag
-main()
+
