@@ -10,7 +10,7 @@ def is_valid(s):
 
     i = 0
     while i < len(s)
-    
+        
 
 
 main()
