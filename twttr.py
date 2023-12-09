@@ -11,7 +11,6 @@ while i < len(str):
     while j < len(vowels):
         # print(str[i],vowels[j],sep="-")
         if str[i].lower() == vowels[j]:
-            print("",end="")
             break
         else:
             print(str[i],end="")
