@@ -6,18 +6,12 @@ j=0
 while i < len(str):
     j=0
     flag = False
-
-
     while j < len(vowels):
-        # print(str[i],vowels[j],sep="-")
         if str[i].lower() == vowels[j]:
             flag = True
             break
-        else:
-            print(str[i],end="")
-            break
         j+=1
-
-
+    if flag==False:
+        print(str[i],end="")
     i+=1
 
