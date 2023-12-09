@@ -1,6 +1,6 @@
 def main():
     x = get_fraction()
-    x = math.ceil(x)
+    x = ceil(x)
     if(x==100):
         print("F")
     elif(x==0):
