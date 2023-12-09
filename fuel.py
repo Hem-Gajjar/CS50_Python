@@ -11,13 +11,10 @@ def get_fraction():
     while True:
         try:
             f = input("Fraction: ")
-            n = f[0]
-            d = f[2]
-            # print(n)
-            # print(d)
-            x = int(n)*100/int(d)
-            # print(x)
-            return (x)
+
+
+
+            
         except ValueError:
             pass
         except ZeroDivisionError:
