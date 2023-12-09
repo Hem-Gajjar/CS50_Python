@@ -18,7 +18,7 @@ def get_fraction():
             print(d)
             if n.isdecimal():
                 continue
-            return int(n)*100/int(d)
+            return int(n)/int(d)
         except ValueError:
             pass
         except ZeroDivisionError:
