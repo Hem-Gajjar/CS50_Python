@@ -18,7 +18,7 @@ while True:
         for i in menu:
             if i.lower() == item.lower():
                 sum  += float(menu[i])
-                print(f"Total: ${sum}")
+                print(f"Total: ${round(sum,2)}")
     except EOFError:
         print()
         break
