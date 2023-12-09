@@ -1,14 +1,19 @@
-str = ("Input: ")
+str = input("Input: ")
 vowels = ["a","e","i","o","u"]
+flag = False
 i=0
 j=0
 while i < len(str):
     j=0
-    while j < len(vowels)
+    Flag = False
+    while j < len(vowels):
         if str[i].lower == vowels[j]:
-            print("",end="")
+            print("")
         else:
-            print(str[i],end="")
+            Flag = True
+            break
         j+=1
+    if Flag:
+        print(str[i],end="")
     i+=1
 
