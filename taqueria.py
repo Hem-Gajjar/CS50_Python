@@ -16,10 +16,11 @@ while True:
     try:
         item = input("Item: ")
         for i in menu:
-            if i == item:
-              sum  += int(menu[i])
-
+            if i.lower() == item.lower():
+                sum  += float(menu[i])
+                print(f"Total: ${sum}")
     except EOFError:
+        print()
         break
 
 
