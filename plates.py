@@ -15,7 +15,7 @@ def is_valid(s):
         if s[0].isnumeric() or s[1].isnumeric()
             return False
         else
-            while i < len(s)
+            while s[i].is
                 s[i].
 
 
