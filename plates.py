@@ -7,7 +7,7 @@ def main():
 
 
 def is_valid(s):
-
+    i = 0
     length = len(s)
     if 2 < length < 6
         return False
@@ -15,7 +15,8 @@ def is_valid(s):
         if s[0].isnumeric() or s[1].isnumeric()
             return False
         else
-            
+            while i < len(s)
+                s[i].
 
 
 main()
