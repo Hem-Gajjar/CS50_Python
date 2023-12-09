@@ -1,6 +1,6 @@
 def main():
     x = get_fraction()
-    x = int(x)
+    x = (int(x))
     if(x==100):
         print("F")
     elif(x==0):
