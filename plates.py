@@ -17,8 +17,11 @@ def is_valid(s):
             i+=1
             while str[i].isnumeric():
                 i+=1
-            if i = length-1:
-                
+            if i == length-1:
+                if str.isalnum():
+                    flag = True
+                else:
+                    flag = False
             else:
                 flag = False
         else:
