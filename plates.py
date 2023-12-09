@@ -14,7 +14,7 @@ def is_valid(s):
         if s[0].isalpha() or s[1].isalpha():
             while s[i].isalpha():
                 i+=1
-            while s[i].isnumeric() or i < length-1:
+            while s[i].isnumeric() and i < length-1:
                 i+=1
             if i == length-1:
                 if s.isalnum():
