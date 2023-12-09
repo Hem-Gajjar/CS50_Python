@@ -19,13 +19,20 @@ def is_valid(s):
     while s[i].isnumeric() and i < len(s)-1:
         i+=1
 
-    if(i == len(s)-1):
-        alphabets = s[0:index_where_num_start]
-        numbers = s[index_where_num_start:len(s)]
-        if len(s) >= 2 and len(s) <= 6:
-            if len(alphabets) >= 2 and alphabets[0].isalpha() and alphabets[1].isalpha():
-                if numbers[0] != "0":
-                    flag = True
+
+
+
+
+    if s.isalnum():
+         if(i == len(s)-1):
+            alphabets = s[0:index_where_num_start]
+            numbers = s[index_where_num_start:len(s)]
+            if len(s) >= 2 and len(s) <= 6:
+                if len(alphabets) >= 2 and alphabets[0].isalpha() and alphabets[1].isalpha():
+                    if numbers[0] != "0":
+                        flag = True
+                    else:
+                        flag = False
                 else:
                     flag = False
             else:
@@ -33,8 +40,7 @@ def is_valid(s):
         else:
             flag = False
     else:
-       flag = False
-
+        flag = False
 
 
 
