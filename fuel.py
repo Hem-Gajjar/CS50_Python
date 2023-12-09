@@ -30,7 +30,7 @@ def get_fraction():
 
 def is_float(x):
     try:
-        float(x)
+        x.replace(".","").isnumeric()
         return True
     except ValueError:
         return False
