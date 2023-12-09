@@ -9,16 +9,13 @@ while i < len(str):
 
 
     while j < len(vowels):
-        if str[i].lower == vowels[j]:
-            flag = True
+        # print(str[i],vowels[j],sep="-")
+        if str[i].lower() == vowels[j]:
+            print("",end="")
             break
         else:
-            flag = False
+            print(str[i],end="")
             break
         j+=1
-
-    if flag:
-        print(str[i],end="")
-
     i+=1
 
