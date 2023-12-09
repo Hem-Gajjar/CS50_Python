@@ -6,7 +6,7 @@ def main():
     elif(x==0):
         print("E")
     else:
-        print(f"{x}%")
+        print(f"{x}%",end="")
 def get_fraction():
     while True:
         try:
@@ -15,7 +15,7 @@ def get_fraction():
             d = int(f[2])
             # print(n)
             # print(d)
-            x = 
+            x = n/d
             # print(x)
             return (x)
         except ValueError:
