@@ -12,8 +12,8 @@ while True:
         amount +=5
 
     print("Amount Due:",price-amount)
-    if amount == price:
-        print("Amount Due:",price-amount)
+    if amount >= price:
+        print("Change Owed:",price-amount)
         break
     elif amount > price:
         print("Change Owed:",amount-price)
