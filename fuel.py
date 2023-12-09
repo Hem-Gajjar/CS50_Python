@@ -4,7 +4,7 @@ def main():
 def get_fraction(prompt):
     while True:
         try:
-            return float(input(prompt))
+            float(input(prompt))
         except ValueError:
             pass
         except ZeroDivisionError:
