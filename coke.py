@@ -13,5 +13,6 @@ while True:
 
     print("Amount Due:",price-amount)
     if amount == price:
+        print("Amount Due:",price-amount)s
         break
 
