@@ -16,7 +16,7 @@ def is_valid(s):
                 i+=1
             while s[i].isnumeric() and i < length-1:
                 i+=1
-            if i == length-1:
+            if i < length:
                 if s.isalnum():
                     flag = True
                 else:
