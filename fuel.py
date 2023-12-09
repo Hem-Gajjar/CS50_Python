@@ -14,9 +14,9 @@ def get_fraction():
             array = (f.partition("/"))
             n = array[0]
             d = array[2]
-            print(n)
-            print(d)
-            if n.isdecimal():
+            # print(n)
+            # print(d)
+            if n.isdouble():
                 continue
             return int(n)/int(d)
         except ValueError:
