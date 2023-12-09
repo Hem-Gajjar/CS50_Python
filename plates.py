@@ -14,7 +14,7 @@ def is_valid(s):
     alphabets = ""
     numbers= ""
 
-    if s.isalnum() and len(s) >= 2 and len(s) <= 6:
+    if s.isalnum() and len(s) >= 2 and len(s) <= 6 :
         while s[i].isalpha() :
             i+=1
         index_where_num_start = i
