@@ -9,10 +9,25 @@ def main():
 def is_valid(s):
 
     i = 0
-    while i < len(s)
-        
+    flag = False
+    index_where_num_start=0
+    alphabets = ""
+    numbers= ""
+    while s[i].isalpha():
+        i+=1
+    index_where_num_start = i
+    while s[i].isnumeric() and i < len(s)-1:
+        i+=1
 
+    if(i == len(s)-1):
+        alphabets = s[0:index_where_num_start]
+        numbers = s[index_where_num_start:len(s)]
+    else:
+       flag = False
 
+    print(alphabets)
+    print(numbers)
+    return False
 main()
 
 
