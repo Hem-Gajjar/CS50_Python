@@ -6,8 +6,9 @@ vegies = {
 def count_item(x):
     i=0
     count=0
+    a = list(vegies)
     while i < len(vegies):
-        if list(vegies[i]) == x :
+        if a[i] == x :
             count=count+1
         i = i+1
     return count
