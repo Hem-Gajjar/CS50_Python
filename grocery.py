@@ -28,9 +28,11 @@ while True:
 names = list(vegies.keys())
 names.sort()
 
-i=0
-for each 
+sorted_vegies = {i :vegies[i] for i in names}
 
+print(sorted_vegies)
 
-
+z=0
+for z in sorted_vegies:
+    print(f)
 
