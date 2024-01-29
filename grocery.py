@@ -5,7 +5,7 @@ vegies = {
 
 def count_item(x):
     i=0
-    count=0
+    count=1
     a = list(vegies)
     while i < len(vegies):
         if a[i] == x :
@@ -18,12 +18,16 @@ while True:
     try:
         x = input()
         count = count_item(x)
-        if count == 0 :
-            vegies[x] = 0
+        if count == 1 :
+            vegies[x] = 1
         else:
             vegies.update({x:count})
     except EOFError:
         break
-print(vegies)
+
+
+j = 0
+while j < len(vegies)
+    print()
 
 
