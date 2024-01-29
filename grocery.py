@@ -4,6 +4,6 @@ while True:
         vegies = input()
     except EOFError:
         break
-
+print(vegies)
 
 
