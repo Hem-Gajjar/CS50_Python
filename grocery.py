@@ -31,8 +31,7 @@ names.sort()
 
 sorted_vegies = {i :vegies[i] for i in names}
 
-print(sorted_vegies)
 
-for key , value in sorted_vegies:
+for key , value in sorted_vegies.items():
     print(f"{value} {key.upper()}")
 
