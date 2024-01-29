@@ -26,8 +26,11 @@ while True:
         break
 
 names = list(vegies.keys())
-
 names.sort()
 
-print(names)
+i=0
+for each 
+
+
+
 
