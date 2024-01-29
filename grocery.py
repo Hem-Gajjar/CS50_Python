@@ -25,11 +25,9 @@ while True:
     except EOFError:
         break
 
-names = list(vegies)
+names = list(vegies.keys())
 
+names.sort()
 
-j = 0
-while j < len(vegies)
-    print(vegies[])
-
+print(names)
 
