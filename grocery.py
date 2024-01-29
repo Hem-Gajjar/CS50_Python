@@ -25,6 +25,8 @@ while True:
     except EOFError:
         break
 
+names = list(vegies)
+
 
 j = 0
 while j < len(vegies)
