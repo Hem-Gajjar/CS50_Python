@@ -18,7 +18,10 @@ while True:
     try:
         x = input()
         count = count_item(x)
-        vegies.update({x:count})
+        if count == 0 :
+            vegies[x] = 0
+        else:
+            vegies.update({x:count})
     except EOFError:
         break
 print(vegies)
