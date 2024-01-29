@@ -1,8 +1,8 @@
-vegies = {}
+vegies = {name:'',count}
 while True:
     try:
         x = input()
-        vegies.update(x)
+        
     except EOFError:
         break
 print(vegies)
