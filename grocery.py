@@ -1,11 +1,10 @@
 vegies = {
-    "name":"",
-    "count":0
+    "name":""
 }
 while True:
     try:
         x = input()
-        vegies.update("name:")
+        vegies.update({"name":x})
     except EOFError:
         break
 print(vegies)
