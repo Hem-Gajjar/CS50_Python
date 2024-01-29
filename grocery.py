@@ -28,6 +28,6 @@ while True:
 
 j = 0
 while j < len(vegies)
-    print()
+    print(vegies.)
 
 
