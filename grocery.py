@@ -1,7 +1,9 @@
-vegies = []
+vegies = {}
 while True:
     try:
-    except:
-        
+        vegies = input()
+    except EOFError:
+        break
+
 
 
