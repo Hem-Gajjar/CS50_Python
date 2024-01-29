@@ -1,7 +1,8 @@
 vegies = {}
 while True:
     try:
-        vegies = input()
+        x = input()
+        vegies.update(x)
     except EOFError:
         break
 print(vegies)
