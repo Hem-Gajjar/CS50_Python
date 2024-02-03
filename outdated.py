@@ -15,15 +15,16 @@ month_list = [
 ]
 
 while True:
+    input_date = input("Date: ")
     try:
-        input_date = input("Date: ")
         month,day,year = input_date.split('/')
         month = int(month)
         day = int(day)
-        if(month >= 1 and month <= 12):
-            .
+        if(month >= 1 and month <= 12 and day >=1 and day <= 31):
+            print(f"{year:02}-{month:02}-{day:02}")
         else:
-            
+            break
+
     except ValueError:
         month,day_year = input_date.split(' ',maxsplit=1)
         day,year = day_year.split(',')
