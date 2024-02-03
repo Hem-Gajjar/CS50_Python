@@ -18,6 +18,7 @@ while True:
     input_date = input("Date: ")
     try:
         month,day,year = input_date.split('/')
+        year = int(year)
         month = int(month)
         day = int(day)
         if(month >= 1 and month <= 12 and day >=1 and day <= 31):
