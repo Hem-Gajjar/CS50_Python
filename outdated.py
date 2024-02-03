@@ -31,7 +31,11 @@ while True:
         year = int(year)
         day = int(day)
         month = month_list.index(month)+1
-        print(f"{year:02}-{month:02}-{day:02}")
+        if(day >=1 and day <= 31):
+            print(f"{year:02}-{month:02}-{day:02}")
+        else:
+            break
+
 
 
 
