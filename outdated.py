@@ -21,7 +21,7 @@ try:
     day = int(day)
     print(f"{year:02}-{month:02}-{day:02}")
 except ValueError:
-    month
+    month,day,year = input_date.split(' ',',')
     print(month)
 
 
