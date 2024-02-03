@@ -25,3 +25,5 @@ if(type(month) == int):
     day = int(day)
     print(f"{year:02}-{month:02}-{day:02}")
 else:
+    month = int(month_list.index(month))
+    print(month)
