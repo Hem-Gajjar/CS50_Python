@@ -18,8 +18,7 @@ while True:
     input_date = input("Date: ")
     try:
         month,day,year = input_date.split('/')
-        if(type(month)==str):
-            break
+
         year = int(year)
         month = int(month)
         day = int(day)
@@ -32,8 +31,8 @@ while True:
     except ValueError:
         month,day_year = input_date.split(' ',maxsplit=1)
         day,year = day_year.split(',')
-        # if(type(month)==int):
-        #     break
+        if(month.isnumeric()):
+            break
         year = int(year)
         day = int(day)
         month = month_list.index(month)+1
