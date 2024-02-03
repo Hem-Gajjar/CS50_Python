@@ -17,9 +17,9 @@ month_list = [
 while True:
     input_date = input("Date: ")
     try:
+        month,day,year = input_date.split('/')
+        year = int(year)
         try:
-            month,day,year = input_date.split('/')
-            year = int(year)
             month = int(month)
         except ValueError:
             continue
@@ -31,8 +31,8 @@ while True:
             continue
 
     except ValueError:
+        month,day_year = input_date.split(' ',maxsplit=1)
         try:
-            month,day_year = input_date.split(' ',maxsplit=1)
             day,year = day_year.split(',')
             year = int(year)
             day = int(day)
