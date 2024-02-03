@@ -14,22 +14,33 @@ month_list = [
     "December"
 ]
 
+input_date = input("Date: ")
 
-# while True:
-try:
-    month,day,year = input_date.split('/')
-    month = int(month)
-    day = int(day)
-    print(f"{year:02}-{month:02}-{day:02}")
-except ValueError:
-    month,day_year = input_date.split(' ',maxsplit=1)
-    day,year = day_year.split(',')
-    year = int(year)
-    day = int(day)
-    month = month_list.index(month)+1
-    print(f"{year:02}-{month:02}-{day:02}")
-    # print(month)
-# if(type(month) == int):
 
-# else:
+
+
+
+
+
+
+
+
+
+
+
+
+
+# try:
+#     month,day,year = input_date.split('/')
+#     month = int(month)
+#     day = int(day)
+#     print(f"{year:02}-{month:02}-{day:02}")
+# except ValueError:
+#     month,day_year = input_date.split(' ',maxsplit=1)
+#     day,year = day_year.split(',')
+#     year = int(year)
+#     day = int(day)
+#     month = month_list.index(month)+1
+#     print(f"{year:02}-{month:02}-{day:02}")
+
 
