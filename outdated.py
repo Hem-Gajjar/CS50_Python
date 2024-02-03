@@ -21,7 +21,7 @@ while True:
         year = int(year)
         month = int(month)
         day = int(day)
-        if(month >= 1 and month <= 12 and day >=1 and day <= 31 and type()):
+        if(month >= 1 and month <= 12 and day >=1 and day <= 31 and type(month)==int):
             print(f"{year:02}-{month:02}-{day:02}")
             break
         else:
