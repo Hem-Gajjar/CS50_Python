@@ -14,8 +14,10 @@ month_list = [
     "December"
 ]
 
-input_date = input("Date: ")
-
+while True:
+    try:
+        input_date = input("Date: ")
+    
 
 
 
