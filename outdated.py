@@ -1,3 +1,6 @@
 
 input_date = input("Date: ")
-print(input_date)
+month,day,year = input_date.split('/')
+print(month)
+print(day)
+print(year)
