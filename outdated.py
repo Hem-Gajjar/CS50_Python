@@ -13,9 +13,10 @@ month_list = [
     "November",
     "December"
 ]
+
+
 # while True:
 try:
-    input_date = input("Date: ")
     month,day,year = input_date.split('/')
     month = int(month)
     day = int(day)
