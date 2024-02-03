@@ -33,8 +33,7 @@ while True:
     except ValueError:
         month,day_year = input_date.split(' ',maxsplit=1)
         day,year = day_year.split(',')
-        if(type(month)==int)
-            break
+        
         year = int(year)
         day = int(day)
         month = month_list.index(month)+1
