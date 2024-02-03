@@ -39,7 +39,7 @@ while True:
         else:
             continue
 
-    except:
+    except Exception:
         break
 
 
