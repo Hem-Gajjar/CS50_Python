@@ -21,11 +21,13 @@ try:
     day = int(day)
     print(f"{year:02}-{month:02}-{day:02}")
 except ValueError:
-    month,day,year = input_date.split(' ',',')
-    print(month)
-
-
-
+    month,day_year = input_date.split(' ',maxsplit=1)
+    day,year = day_year.split(',')
+    year = int(year)
+    day = int(day)
+    month = month_list.index(month)+1
+    print(f"{year:02}-{month:02}-{day:02}")
+    # print(month)
 # if(type(month) == int):
 
 # else:
