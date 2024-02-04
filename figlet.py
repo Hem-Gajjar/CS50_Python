@@ -6,6 +6,7 @@ import sys
 if len(sys.argv)==1:
     text = input("Input: ")
     f = Figlet(font='banner3')
+    print("Output:")
     print(f.renderText(text))
 
 if len(sys.argv)==3:
@@ -14,6 +15,7 @@ if len(sys.argv)==3:
     if(font_cmd == "-f" or font_cmd == "--font"):
         text = input("Input: ")
         f = Figlet(font=font_name)
+        print("Output:")
         print(f.renderText(text))
 
 
