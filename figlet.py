@@ -11,7 +11,10 @@ elif len(sys.argv)==3:
     font_name = sys.argv[2]
     if(font_cmd == "-f" or font_cmd == "--font"):
         text = input("Input: ")
-        f = Figlet(font=font_name)
+        try:
+            f = Figlet(font=font_name)
+        except:
+            sys.exit("Invalid usage")
         print("Output:")
         print(f.renderText(text))
     else:
