@@ -11,7 +11,7 @@ if len(sys.argv)==1:
 elif len(sys.argv)==3:
     font_cmd = sys.argv[1]
     font_name = sys.argv[2]
-    if(all_fonts.find(font_name)):
+    if(all_fonts.index(font_name)):
         if(font_cmd == "-f" or font_cmd == "--font"):
             text = input("Input: ")
             try:
