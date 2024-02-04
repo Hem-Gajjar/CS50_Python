@@ -1,6 +1,6 @@
 from pyfiglet import Figlet
 import sys
-
+all_fonts = figlet.getFonts()
 if len(sys.argv)==1:
     text = input("Input: ")
     f = Figlet(font='banner3')
