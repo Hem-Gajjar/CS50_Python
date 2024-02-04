@@ -1,6 +1,10 @@
 from pyfiglet import Figlet
+import sys
+
+if len(sys.argv)==
+
 
 text = "Demo"
 f = Figlet(font='slant')
-f.renderText(text)
+print(f.renderText(text))
 
