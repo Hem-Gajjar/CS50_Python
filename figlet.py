@@ -15,7 +15,7 @@ elif len(sys.argv)==3:
         print("Output:")
         print(f.renderText(text))
 else:
-    print("Invalid usage")
+    sys.exit()
 
 
 
