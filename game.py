@@ -17,6 +17,9 @@ while True:
             if(rand == guess):
                 print("Just right!")
                 break
+            elif(rand<guess):
+                print("")
+                
     except:
         print(exception)
         break
