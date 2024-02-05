@@ -8,10 +8,11 @@ def is_neg(x):
 
 while True:
     try:
-        level = int(input("Level: "))
-        if(is_neg(level) and isnumeric(level)):
+        level = input("Level: ")
+        if(is_neg(level) and isnumeric(level)==0):
             continue
         else:
+            level = int(level)
             rand = random.randint(1,level)
             while True:
                 guess = int(input("Guess: "))
@@ -26,6 +27,7 @@ while True:
                     continue
             break
     except:
+        print("ooo")
         break
 
 
