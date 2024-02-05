@@ -17,16 +17,17 @@ while True:
                 if(guess.isnumeric()):
                     guess = int(guess)
                     if(guess >level):
-                        continue
-                    if(rand == guess):
-                        print("Just right!")
-                        break
-                    elif(rand<guess):
                         print("Too large!")
-                        continue
-                    elif(rand>guess):
-                        print("Too small!")
-                        continue
+                    else:
+                        if(rand == guess):
+                            print("Just right!")
+                            break
+                        elif(rand<guess):
+                            print("Too large!")
+                            continue
+                        elif(rand>guess):
+                            print("Too small!")
+                            continue
                 else:
                     continue
             break
