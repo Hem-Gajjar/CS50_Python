@@ -15,8 +15,6 @@ while True:
             while True:
                 guess = input("Guess: ")
                 if(guess.isnumeric()):
-                    if(guess <= level):
-                        continue
                     guess = int(guess)
                     if(rand == guess):
                         print("Just right!")
