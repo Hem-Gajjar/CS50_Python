@@ -17,7 +17,7 @@ while True:
                 if(guess.isnumeric()):
                     guess = int(guess)
                     if(guess >level):
-                        print("Too large!")
+                        continue
                     else:
                         if(rand == guess):
                             print("Just right!")
