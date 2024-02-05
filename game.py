@@ -14,6 +14,8 @@ while True:
             rand = random.randint(1,level)
             while True:
                 guess = input("Guess: ")
+                if(guess >level):
+                    continue
                 if(guess.isnumeric()):
                     guess = int(guess)
                     if(rand == guess):
@@ -33,7 +35,7 @@ while True:
             continue
 
     except:
-        print("ooo")
+        print("Exception Occured")
         break
 
 
