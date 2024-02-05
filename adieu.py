@@ -1,7 +1,7 @@
 import inflect
 
 p  = inflect.engine()
-list = ["Adieu, adieu, to "]
+list = []
 while True:
     try:
         name = input("Name: ")
@@ -10,4 +10,4 @@ while True:
         break
 
 mylist = p.join(list)
-print(mylist)
+print(f"Adieu, adieu, to {mylist}")
