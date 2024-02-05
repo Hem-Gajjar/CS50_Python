@@ -9,7 +9,7 @@ def is_neg(x):
 while True:
     try:
         level = input("Level: ")
-        if(is_neg(level) and isnumeric(level)==0):
+        if(is_neg(level) and level.isalpha()):
             continue
         else:
             level = int(level)
