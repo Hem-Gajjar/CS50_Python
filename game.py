@@ -35,7 +35,7 @@ while True:
             continue
 
     except:
-        print("Exception Occured")
+        print(f"Exception Occured:{except.()}")
         break
 
 
