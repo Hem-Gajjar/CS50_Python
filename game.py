@@ -9,7 +9,7 @@ def is_neg(x):
 while True:
     try:
         level = int(input("Level: "))
-        if(is_neg(level)):
+        if(is_neg(level) and isnumeric(level)):
             continue
         else:
             rand = random.randint(1,level)
@@ -26,7 +26,6 @@ while True:
                     continue
             break
     except:
-        print(exception)
         break
 
 
