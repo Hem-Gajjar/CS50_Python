@@ -13,10 +13,9 @@ while True:
             level = int(level)
             rand = random.randint(1,level)
             while True:
-                guess = input("Guess: ")
-                if(guess.isalpha() or guess.isalnum()):
-                    continue
-                guess = int(guess)
+                guess = int(input("Guess: "))
+
+
                 if(rand == guess):
                     print("Just right!")
                     break
