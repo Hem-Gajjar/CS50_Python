@@ -13,15 +13,18 @@ while True:
             level = int(level)
             rand = random.randint(1,level)
             while True:
-                guess = int(input("Guess: "))
-                if(rand == guess):
-                    print("Just right!")
-                    break
-                elif(rand<guess):
-                    print("Too large!")
-                    continue
-                elif(rand>guess):
-                    print("Too small!")
+                guess = input("Guess: ")
+                if(guess.isnumeric()):
+                    if(rand == guess):
+                        print("Just right!")
+                        break
+                    elif(rand<guess):
+                        print("Too large!")
+                        continue
+                    elif(rand>guess):
+                        print("Too small!")
+                        continue
+                else:
                     continue
             break
 
