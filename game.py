@@ -10,9 +10,8 @@ while True:
     try:
         level = input("Level: ")
         if(level.isalpha() or level.isalnum()):
-            continue
-        if(is_neg(level)):
-            continue
+            if(is_neg(level)):
+                continue
         else:
             level = int(level)
             rand = random.randint(1,level)
