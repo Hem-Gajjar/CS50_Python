@@ -23,6 +23,8 @@ while True:
                         break
                     elif(rand<guess):
                         print("Too large!")
+                        if(guess > level):
+                            break
                         continue
                     elif(rand>guess):
                         print("Too small!")
