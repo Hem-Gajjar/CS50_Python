@@ -10,8 +10,6 @@ while True:
     try:
         level = input("Level: ")
         if(level.isnumeric()):
-
-        else:
             level = int(level)
             rand = random.randint(1,level)
             while True:
@@ -26,6 +24,10 @@ while True:
                     print("Too small!")
                     continue
             break
+
+        else:
+            continue
+
     except:
         print("ooo")
         break
