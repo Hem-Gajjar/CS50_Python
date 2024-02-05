@@ -1,4 +1,11 @@
 import random
+def is_neg(x):
+    if (x<0):
+        return True
+    else:
+        return False
+
+
 while True:
     try:
         level = int(input("Level: "))
@@ -9,13 +16,10 @@ while True:
             guess = int(input("Guess: "))
             if(rand == guess):
                 print("Just right!")
+                break
     except:
+        print(exception)
         break
 
 
-def is_neg(x):
-    print("called")
-    if (x<0):
-        return True
-    else:
-        return False
+
