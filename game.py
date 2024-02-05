@@ -9,8 +9,8 @@ def is_neg(x):
 while True:
     try:
         level = input("Level: ")
-        if(level.isalpha() or level.isalnum() or is_neg(level)):
-            continue
+        if(level.isnumeric()):
+
         else:
             level = int(level)
             rand = random.randint(1,level)
