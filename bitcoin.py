@@ -13,7 +13,7 @@ try:
 
         rate = float(o["bpi"]["USD"]["rate_float"])
         amount = rate * num
-        print(f"{amount:,.4f}")
+        print(f"${amount:,.4f}")
     elif len(sys.argv) == 1:
         print("Missing command-line argument")
         sys.exit()
