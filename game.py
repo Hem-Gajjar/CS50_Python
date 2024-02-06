@@ -1,6 +1,6 @@
 import random
 def is_neg(x):
-    if (x<0):
+    if (x<=0):
         return True
     else:
         return False
@@ -19,7 +19,7 @@ while True:
                 if(guess.isnumeric()):
                     guess = int(guess)
                     if(guess >level):
-                        # print("Too large!")
+                        print("Too large!")
                         continue
                     else:
                         if(rand == guess):
