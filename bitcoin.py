@@ -4,7 +4,7 @@ import requests
 try:
     if(len(sys.argv())!=2):
         num = float(input(sys.argv()))
-        
+        response = requests.get()
     elif(len(sys.argv())==1):
         print("Missing command-line argument")
 except ValueError:
