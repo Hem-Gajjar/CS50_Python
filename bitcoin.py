@@ -9,7 +9,7 @@ try:
         o = response.json()
         for i in o["bpi"]:
             for j in i[0]:
-                print(j[1])
+                print(j[2])
 
     elif(len(sys.argv)==1):
         print("Missing command-line argument")
