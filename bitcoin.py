@@ -14,6 +14,7 @@ try:
     elif(len(sys.argv)==1):
         print("Missing command-line argument")
         sys.exit()
+        
 except ValueError:
     print("Command-line argument is not a number")
     sys.exit()
