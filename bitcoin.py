@@ -4,16 +4,15 @@ import json
 try:
     if(len(sys.argv)==2):
 
-        print("1")
+    
         num = float(sys.argv[1])
-        print("2")
+
         response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-        print("3")
+
         o = response.json()
-        print("4")
-        rate = (o["bpi"]["USD"]["rate"])
-        rate = rate.strip(',')
-        print(rate)
+
+        rate = float(o["bpi"]["USD"]["rate_float"])
+        print(rate*num)
     elif(len(sys.argv)==1):
         print("Missing command-line argument")
         sys.exit()
