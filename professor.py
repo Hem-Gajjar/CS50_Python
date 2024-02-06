@@ -16,8 +16,10 @@ def main():
                 continue
             else:
                 incorrect_count += 1
-                if(incorrect_count == 3)
-                    
+                if(incorrect_count == 3):
+                    print(f"{x} + {y} = {correct_ans}")
+                    incorrect_count = 0
+                    continue
         except ValueError:
             pass
 def get_level():
