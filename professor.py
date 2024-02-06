@@ -22,8 +22,16 @@ def get_level():
             pass
 
 def generate_integer(level):
+    digits = 0
+    if(level==1):
+        digits = 9
+    elif(level==2):
+        digits = 99
+    else:
+        digits=999
     while True:
-        x = random.randint(0,level)
+
+        x = random.randint(0,)
         if(x >= 0):
             return x
         else:
