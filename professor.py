@@ -28,6 +28,8 @@ def main():
             except ValueError:
                 pass
         print(f"Score: {correct_count}")
+
+
 def get_level():
     while True:
         try:
@@ -38,6 +40,8 @@ def get_level():
                 pass
         except ValueError:
             pass
+
+
 
 def generate_integer(level):
 
