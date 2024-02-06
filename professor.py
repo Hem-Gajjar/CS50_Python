@@ -7,8 +7,8 @@ def main():
         x = generate_integer(level)
         y = generate_integer(level)
         correct_ans = x+y
-        z =
-
+        print(correct_ans)
+        break
 
 def get_level():
     while True:
@@ -21,9 +21,9 @@ def get_level():
         except ValueError:
             pass
 
-def generate_integer():
+def generate_integer(level):
     while True:
-        x = random.randint()
+        x = random.randint(0,level)
         if(x >= 0):
             return x
         else:
