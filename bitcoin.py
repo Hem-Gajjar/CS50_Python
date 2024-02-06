@@ -12,9 +12,7 @@ try:
         o = response.json()
         print("4")
         rate = (o["bpi"]["USD"]["rate"])
-        print(rate)
-        print(rate*num)
-        print("6")
+        
     elif(len(sys.argv)==1):
         print("Missing command-line argument")
         sys.exit()
