@@ -17,13 +17,15 @@ def main():
                     break
                 else:
                     incorrect_count += 1
+                    print("EEE")
                     if(incorrect_count == 3):
                         print(f"{x} + {y} = {correct_ans}")
+                        i+=1
                         incorrect_count = 0
-                        continue
+                        break
             except ValueError:
                 pass
-        
+
 def get_level():
     while True:
         try:
