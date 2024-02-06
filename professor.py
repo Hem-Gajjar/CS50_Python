@@ -3,13 +3,23 @@ import random
 def main():
     level = get_level()
     i=0
+    incorrect_count = 0
     while(i<10):
         x = generate_integer(level)
         y = generate_integer(level)
         correct_ans = x+y
-        print(correct_ans)
-        break
-
+        try:
+            z = int(input(f"{x} + {y} ="))
+            if(z == correct_ans):
+                i = i+1
+                incorrect_count =0
+                continue
+            else:
+                incorrect_count += 1
+                if(incorrect_count == 3)
+                    
+        except ValueError:
+            pass
 def get_level():
     while True:
         try:
@@ -22,16 +32,17 @@ def get_level():
             pass
 
 def generate_integer(level):
-    digits = 0
+    digit = 0
     if(level==1):
-        digits = 9
+        digit = 9
     elif(level==2):
-        digits = 99
+        digit = 99
     else:
-        digits=999
+        digit=999
+
     while True:
 
-        x = random.randint(0,)
+        x = random.randint(0,digit)
         if(x >= 0):
             return x
         else:
