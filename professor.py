@@ -27,7 +27,7 @@ def main():
                         break
             except ValueError:
                 pass
-
+        print(f"Score: {correct_count}")
 def get_level():
     while True:
         try:
