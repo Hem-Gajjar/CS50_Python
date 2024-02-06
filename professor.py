@@ -4,6 +4,7 @@ def main():
     level = get_level()
     i=0
     incorrect_count = 0
+    correct_count = 0
     while(i<10):
         x = generate_integer(level)
         y = generate_integer(level)
@@ -13,6 +14,7 @@ def main():
                 z = int(input(f"{x} + {y} ="))
                 if(z == correct_ans):
                     i = i+1
+                    correct_count += 1
                     incorrect_count =0
                     break
                 else:
