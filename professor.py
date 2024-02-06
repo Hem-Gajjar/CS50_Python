@@ -8,20 +8,22 @@ def main():
         x = generate_integer(level)
         y = generate_integer(level)
         correct_ans = x+y
-        try:
-            z = int(input(f"{x} + {y} ="))
-            if(z == correct_ans):
-                i = i+1
-                incorrect_count =0
-                continue
-            else:
-                incorrect_count += 1
-                if(incorrect_count == 3):
-                    print(f"{x} + {y} = {correct_ans}")
-                    incorrect_count = 0
-                    continue
-        except ValueError:
-            pass
+        while(incorrect_count<=3):
+            try:
+                z = int(input(f"{x} + {y} ="))
+                if(z == correct_ans):
+                    i = i+1
+                    incorrect_count =0
+                    break
+                else:
+                    incorrect_count += 1
+                    if(incorrect_count == 3):
+                        print(f"{x} + {y} = {correct_ans}")
+                        incorrect_count = 0
+                        continue
+            except ValueError:
+                pass
+        
 def get_level():
     while True:
         try:
