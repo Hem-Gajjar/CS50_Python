@@ -4,12 +4,12 @@ def main():
     level = get_level()
     i=0
     while(i<10):
-        x = generate_integer()
-        y = generate_integer()
+        x = generate_integer(level)
+        y = generate_integer(level)
         correct_ans = x+y
         z =
 
-        
+
 def get_level():
     while True:
         try:
