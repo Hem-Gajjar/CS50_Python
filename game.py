@@ -11,6 +11,8 @@ while True:
         level = input("Level: ")
         if(level.isnumeric()):
             level = int(level)
+            if(is_neg(level)):
+                continue
             rand = random.randint(1,level)
             while True:
                 guess = input("Guess: ")
