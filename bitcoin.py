@@ -4,8 +4,9 @@ import requests
 try:
     if(len(sys.argv())!=2):
         num = float(input(sys.argv()))
-        response = requests.get()
-        
+        response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+        o = response.json()
+        print(json.dumps(response.json(),indent=2))
     elif(len(sys.argv())==1):
         print("Missing command-line argument")
 except ValueError:
