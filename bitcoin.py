@@ -12,7 +12,8 @@ try:
         o = response.json()
 
         rate = float(o["bpi"]["USD"]["rate_float"])
-        print(rate * num)
+        amount = rate * num
+        print(f"{amount:,.4f}")
     elif len(sys.argv) == 1:
         print("Missing command-line argument")
         sys.exit()
