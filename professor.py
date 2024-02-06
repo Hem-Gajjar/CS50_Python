@@ -38,17 +38,20 @@ def get_level():
             pass
 
 def generate_integer(level):
-    digit = 0
+
     if(level==1):
-        digit = 9
+        low = 0
+        high = 9
     elif(level==2):
-        digit = 99
+        low = 10
+        high = 99
     else:
-        digit=999
+        low=100
+        high=999
 
     while True:
 
-        x = random.randint(0,digit)
+        x = random.randint(low,high)
         if(x >= 0):
             return x
         else:
