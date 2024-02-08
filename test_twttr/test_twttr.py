@@ -17,8 +17,8 @@ def test_capital():
 def test_number():
     assert shorten("h3m") == "h3m"
 
-# def test_pun():
-#     assert shorten("h,m") == "hm"
+def test_pun():
+    assert shorten("h,m") == "h,m"
 
 
 if __name__=="__main__":

@@ -1,5 +1,5 @@
 
-vowels = ["a","e","i","o","u","A","E","I","O","U",","]
+vowels = ["a","e","i","o","u","A","E","I","O","U"]
 
 def main():
     input_str = input("Input: ")
