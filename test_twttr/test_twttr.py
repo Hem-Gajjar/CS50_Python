@@ -14,8 +14,8 @@ def test_normal():
 def test_capital():
     assert shorten("hEm") == "hm"
 
-# def test_number():
-#     assert shorten("h3m") == "hm"
+def test_number():
+    assert shorten("h3m") == "h3m"
 
 # def test_pun():
 #     assert shorten("h,m") == "hm"
