@@ -1,5 +1,5 @@
 
-input_str = input("Input: ")
+# input_str = input("Input: ")
 vowels = ["a","e","i","o","u","A","E","I","O","U",","]
 
 
@@ -17,5 +17,5 @@ def shorten(str):
 
     return xyz
 
-print(shorten(input_str))
+# print(shorten(input_str))
 
