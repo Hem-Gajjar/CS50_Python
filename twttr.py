@@ -1,9 +1,9 @@
 input_str = input("Input: ")
-vowels = ["a","e","i","o","u"]
+vowels = ["a","e","i","o","u","A","E","I","O","U"]
 
 def shorten(str):
     xyz = ""
-    str = str.lower()
+    # str = str.lower()
     for i in str:
         flag = False
         for x in vowels:
@@ -15,5 +15,5 @@ def shorten(str):
 
     return xyz
 
-# print(check(input_str))
+print(shorten(input_str))
 
