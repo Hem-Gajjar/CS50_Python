@@ -1,9 +1,12 @@
 str = input("Input: ")
 vowels = ["a","e","i","o","u"]
-flag = False
-i=0
-j=0
-while i < len(str):
+
+def check():
+
+    flag = False
+    i=0
+    j=0
+    while i < len(str):
     j=0
     flag = False
     while j < len(vowels):
@@ -14,4 +17,5 @@ while i < len(str):
     if flag==False:
         print(str[i],end="")
     i+=1
+
 
