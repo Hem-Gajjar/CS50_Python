@@ -1,4 +1,4 @@
-from twttr import shorten
+from test_twttr.twttr import shorten
 
 def test_normal():
     assert shorten("twitter") == "twttr"
