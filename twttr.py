@@ -1,24 +1,20 @@
 
-vowels = ["a","e","i","o","u","A","E","I","O","U",","]
 
-def main():
-    input_str = input("Input: ")
-    print(shorten(input_str))
+str = input("Input: ")
+vowels = ["a","e","i","o","u"]
+flag = False
+i=0
+j=0
+while i < len(str):
+    j=0
+    flag = False
+    while j < len(vowels):
+        if str[i].lower() == vowels[j]:
+            flag = True
+            break
+        j+=1
+    if flag==False:
+        print(str[i],end="")
+    i+=1
 
 
-def shorten(str):
-    xyz = ""
-
-    for i in str:
-        flag = False
-        for x in vowels:
-            if(i==x or i.isnumeric()): # vowel
-                flag = True
-                break
-        if flag == False:
-            xyz+=i
-
-    return xyz
-
-if __name__=="__main__":
-    main()
