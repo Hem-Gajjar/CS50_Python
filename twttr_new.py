@@ -5,13 +5,18 @@ def check(str):
     xyz = ""
     str = str.lower()
     for i in str:
+        flag = False
         for x in vowels:
-            if(i==x):
+            if(i==x): # vowel
+                flag = True
                 break
-            if(i!=x):
-                xyz+=i
-                break
+        if flag == False:
+            xyz+=i
 
     return xyz
 
 print(check(input_str))
+
+
+
+**
