@@ -8,9 +8,9 @@ def check(str):
         for x in vowels:
             if(i==x):
                 break
-            if(i!=x)
+            if(i!=x):
                 xyz+=i
-                # break
+                break
 
     return xyz
 
