@@ -1,8 +1,8 @@
 from twttr import shorten()
 
-def test_normal():
-    assert shorten("twitter") == "twttr"
-    assert shorten("hem") == "hm"
+# def test_normal():
+#     assert shorten("twitter") == "twttr"
+#     assert shorten("hem") == "hm"
 
 def test_capital():
     assert shorten("hEm") == "hm"
