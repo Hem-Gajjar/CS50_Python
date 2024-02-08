@@ -1,22 +1,21 @@
-input_str = input("Input: ")
+
+
+#********************************
+str = input("Input: ")
 vowels = ["a","e","i","o","u"]
-
-def check(str):
-    xyz = ""
-    str = str.lower()
-    for i in str:
-        flag = False
-        for x in vowels:
-            if(i==x): # vowel
-                flag = True
-                break
-        if flag == False:
-            xyz+=i
-
-    return xyz
-
-print(check(input_str))
+flag = False
+i=0
+j=0
+while i < len(str):
+    j=0
+    flag = False
+    while j < len(vowels):
+        if str[i].lower() == vowels[j]:
+            flag = True
+            break
+        j+=1
+    if flag==False:
+        print(str[i],end="")
+    i+=1
 
 
-
-**
