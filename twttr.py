@@ -8,7 +8,6 @@ def main():
 
 def shorten(str):
     xyz = ""
-
     for i in str:
         flag = False
         for x in vowels:
