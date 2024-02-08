@@ -1,7 +1,7 @@
 input_str = input("Input: ")
 vowels = ["a","e","i","o","u"]
 
-def check(str):
+def shorten(str):
     xyz = ""
     str = str.lower()
     for i in str:
@@ -15,5 +15,5 @@ def check(str):
 
     return xyz
 
-print(check(input_str))
+# print(check(input_str))
 

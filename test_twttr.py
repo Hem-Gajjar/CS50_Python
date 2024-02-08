@@ -1,5 +1,5 @@
-from twttr import check
+from twttr import shorten
 
 def test_twttr():
-    assert check("twitter") == "twttr"
-    assert check("hem") == "hm"
+    assert shorten("twitter") == "twttr"
+    assert shorten("hem") == "hm"
