@@ -1,4 +1,11 @@
-from twttr import shorten
+from test_twttr.twttr import shorten
+
+
+def main():
+    test_normal()
+    test_capital()
+    test_number()
+    test_pun()
 
 def test_normal():
     assert shorten("twitter") == "twttr"
@@ -12,3 +19,7 @@ def test_number():
 
 def test_pun():
     assert shorten("h,m") == "hm"
+
+
+if __name__=="__main__":
+    main()
