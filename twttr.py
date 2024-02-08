@@ -1,7 +1,7 @@
 str = input("Input: ")
 vowels = ["a","e","i","o","u"]
 
-def check():
+def check(str):
 
     flag = False
     i=0
@@ -17,5 +17,5 @@ def check():
     if flag==False:
         print(str[i],end="")
     i+=1
-
+    
 
