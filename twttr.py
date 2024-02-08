@@ -7,7 +7,7 @@ def shorten(str):
     for i in str:
         flag = False
         for x in vowels:
-            if(i==x): # vowel
+            if(i==x or i.isnumeric()): # vowel
                 flag = True
                 break
         if flag == False:
