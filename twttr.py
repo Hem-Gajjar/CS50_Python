@@ -1,12 +1,11 @@
-import string
+
 input_str = input("Input: ")
-vowels = ["a","e","i","o","u","A","E","I","O","U"]
+vowels = ["a","e","i","o","u","A","E","I","O","U",","]
 
 
 def shorten(str):
     xyz = ""
-    # str = str.lower()
-    str = str.punctuation()
+
     for i in str:
         flag = False
         for x in vowels:
