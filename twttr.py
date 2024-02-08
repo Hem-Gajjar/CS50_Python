@@ -1,4 +1,4 @@
-input_str = input("Input: ")
+# input_str = input("Input: ")
 vowels = ["a","e","i","o","u"]
 
 def check(str):
@@ -15,5 +15,5 @@ def check(str):
 
     return xyz
 
-print(check(input_str))
+# print(check(input_str))
 
