@@ -1,6 +1,6 @@
 def main():
     x = convert("1/4")
-    
+    gauge(x)
 
 def gauge(x):
     x = round(x)
