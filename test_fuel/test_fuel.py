@@ -1,10 +1,10 @@
 import pytest
 try:
     from test_fuel.fuel import convert , gauge
-    print("hello")
+    # print("hello")
 except:
     from fuel import convert , gauge
-    print("hell")
+    # print("hell")
 
 # def main():
     # test_correct_input()

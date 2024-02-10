@@ -15,14 +15,15 @@ def gauge(x):
 def convert(f):
     while True:
         try:
-            # f = input("Fraction: ")
             array = (f.partition("/"))
             n = array[0]
             d = array[2]
             if(int(n)<=int(d)):
                 if isinstance(n,float):
+                    f = input("Fraction: ")
                     continue
                 if isinstance(n,float):
+                    f = input("Fraction: ")
                     continue
                 return(round((int(n)/int(d))*100))
 
