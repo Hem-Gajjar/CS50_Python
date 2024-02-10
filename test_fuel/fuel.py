@@ -23,7 +23,9 @@ def convert():
                     continue
                 if isinstance(n,float):
                     continue
-                return (int(n)/int(d))*100
+                # return (int(n)/int(d))*100
+                gauge((int(n)/int(d))*100)
+                break
         except ValueError:
             pass
         except ZeroDivisionError:
