@@ -1,9 +1,12 @@
-from bank import value
+try:
+    from test_bank.bank import value
+except:
+    from bank import value
 
-def main():
-    test_hello()
-    test_hii()
-    test_namaste()
+# def main():
+    # test_hello()
+    # test_hii()
+    # test_namaste()
 
 
 def test_hello():
@@ -18,5 +21,5 @@ def test_namaste():
     assert value("namaste") == "$100"
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
