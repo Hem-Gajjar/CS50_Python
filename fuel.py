@@ -2,7 +2,7 @@ def main():
     x = convert()
     gauge(x)
 
-def gauge(x)
+def gauge(x):
     x = round(x)
     if(x==100 or x==99):
         print("F")
