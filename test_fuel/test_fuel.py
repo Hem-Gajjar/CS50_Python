@@ -5,4 +5,7 @@ except:
     from fuel import convert
     from fuel import gauge
 
-def test_
+def test_prompt():
+    try:
+        assert convert(3/4) == "75%"
+    
