@@ -1,5 +1,5 @@
 def main():
-    x = convert('1/4')
+    x = convert()
     print(x)
     gauge(x)
 
@@ -12,18 +12,17 @@ def gauge(x):
     else:
         print(f"{x}%")
 
-def convert(f):
+def convert():
     while True:
         try:
+            f = input("Fraction: ")
             array = (f.partition("/"))
             n = array[0]
             d = array[2]
             if(int(n)<=int(d)):
                 if isinstance(n,float):
-                    f = input("Fraction: ")
                     continue
                 if isinstance(n,float):
-                    f = input("Fraction: ")
                     continue
                 return(round((int(n)/int(d))*100))
 
