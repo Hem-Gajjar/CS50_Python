@@ -1,5 +1,5 @@
 def main():
-    x = convert("1/4")
+    x = convert()
     gauge(x)
 
 def gauge(x):
@@ -11,10 +11,10 @@ def gauge(x):
     else:
         print(f"{x}%")
 
-def convert(f):
+def convert():
     while True:
         try:
-            # f = input("Fraction: ")
+            f = input("Fraction: ")
             array = (f.partition("/"))
             n = array[0]
             d = array[2]
