@@ -1,5 +1,8 @@
 def main():
-    x = get_fraction()
+    x = convert()
+    gauge(x)
+
+def gauge(x)
     x = round(x)
     if(x==100 or x==99):
         print("F")
@@ -8,7 +11,7 @@ def main():
     else:
         print(f"{x}%",end="")
 
-def get_fraction():
+def convert():
     while True:
         try:
             f = input("Fraction: ")
