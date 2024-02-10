@@ -1,6 +1,5 @@
-def main():
-    x = convert()
-    gauge(x)
+# def main():
+#     convert()
 
 def gauge(x):
     x = round(x)
@@ -23,8 +22,8 @@ def convert():
                     continue
                 if isinstance(n,float):
                     continue
-                return((int(n)/int(d))*100)
-
+                gauge((int(n)/int(d))*100)
+                break
         except ValueError:
             pass
         except ZeroDivisionError:
@@ -33,5 +32,5 @@ def convert():
 
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
