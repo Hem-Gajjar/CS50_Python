@@ -3,9 +3,9 @@
 
 def gauge(x):
     x = round(x)
-    if(x==100 or x==99):
+    if(x>=99):
         print("F")
-    elif(x==0 or x==1):
+    elif(x<=1):
         print("E")
     else:
         print(f"{x}%",end="")
