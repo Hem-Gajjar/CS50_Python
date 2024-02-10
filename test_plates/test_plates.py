@@ -16,7 +16,7 @@ def test_number_in_middle():
     assert is_valid("H50CS") == False
 
 def test_starts_with_non_character():
-    assert is_valid("50CS") == False
+    assert is_valid("5CS") == False
 
 def test_no_at_last():
     assert is_valid("CS50") == True
