@@ -11,7 +11,7 @@ def test_zero_division():
         convert('1/0')
 
 def test_value_error():
-    with pytest.raises(ZeroDivisionError):
+    with pytest.raises(ValueError):
         convert('x/y')
 
 def test_correct_input():
