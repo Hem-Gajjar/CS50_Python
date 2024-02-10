@@ -1,5 +1,6 @@
 def main():
     x = convert()
+    print(x)
     gauge(x)
 
 def gauge(x):
