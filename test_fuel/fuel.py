@@ -12,10 +12,10 @@ def gauge(x):
     else:
         print(f"{x}%")
 
-def convert():
+def convert(f):
     while True:
         try:
-            f = input("Fraction: ")
+            # f = input("Fraction: ")
             array = (f.partition("/"))
             n = array[0]
             d = array[2]

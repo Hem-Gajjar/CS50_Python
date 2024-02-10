@@ -1,12 +1,14 @@
 import pytest
 try:
     from test_fuel.fuel import convert , gauge
+    print("hello")
 except:
     from fuel import convert , gauge
+    print("hell")
 
 # def main():
     # test_correct_input()
-    
+
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
         convert('1/0')
