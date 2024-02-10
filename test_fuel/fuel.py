@@ -9,7 +9,7 @@ def gauge(x):
     elif(x<=1):
         print("E")
     else:
-        print(f"{x}%",end="")
+        print(f"{x}%")
 
 def convert(f):
     while True:
