@@ -1,5 +1,6 @@
-# def main():
-#     convert()
+def main():
+    x = convert()
+    gauge(x)
 
 def gauge(x):
     x = round(x)
@@ -25,12 +26,12 @@ def convert():
                 return((int(n)/int(d))*100)
 
         except ValueError:
-            raise
+            pass
         except ZeroDivisionError:
-            raise
+            pass
 
 
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
