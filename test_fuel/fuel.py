@@ -1,5 +1,5 @@
-# def main():
-#     convert()
+def main():
+    convert()
 
 def gauge(x):
     x = round(x)
@@ -32,5 +32,5 @@ def convert():
 
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
