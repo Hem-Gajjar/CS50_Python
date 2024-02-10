@@ -9,9 +9,10 @@ except:
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
         convert('1/0')
-def test_zero_division():
+
+def test_value_error():
     with pytest.raises(ZeroDivisionError):
-        convert('1/0')
+        convert('x/y')
 
 def test_correct_input():
     assert convert('1/4') == 25 and gauge(25) == "25%"
