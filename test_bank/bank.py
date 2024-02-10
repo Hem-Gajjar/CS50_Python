@@ -5,6 +5,7 @@ def value(greet):
 
     greet = greet.lower()
     greet = greet.strip()
+   
     if greet.startswith("hello"):
         x=0
     elif greet.startswith("h"):
