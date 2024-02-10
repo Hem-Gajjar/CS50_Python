@@ -1,5 +1,5 @@
 def main():
-    x = convert()
+    x = convert('1/4')
     print(x)
     gauge(x)
 
