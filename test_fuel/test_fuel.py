@@ -1,4 +1,4 @@
-
+import pytest
 try:
     from test_fuel.fuel import convert , gauge
 except:
@@ -6,6 +6,9 @@ except:
 
 # def main():
     # test_correct_input()
+def test_zero_division():
+    with pytest.raises(ZeroDivisionError):
+        convert('1/0')
 
 def test_correct_input():
     assert convert('1/4') == 25 and gauge(25) == "25%"
