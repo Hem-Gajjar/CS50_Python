@@ -15,7 +15,7 @@ def test_hii():
 
 
 def test_namaste():
-    assert value("namaste koi kaam") == "$100"
+    assert value("namaste") == "$100"
 
 
 if __name__ == "__main__":
