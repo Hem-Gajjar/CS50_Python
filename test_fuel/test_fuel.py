@@ -6,6 +6,7 @@ except:
 
 # def main():
     # test_correct_input()
+    
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
         convert('1/0')
