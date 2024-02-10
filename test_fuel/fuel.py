@@ -1,5 +1,6 @@
 def main():
-    convert("1/4")
+    x = convert("1/4")
+    
 
 def gauge(x):
     x = round(x)
@@ -22,8 +23,8 @@ def convert(f):
                     continue
                 if isinstance(n,float):
                     continue
-                gauge((int(n)/int(d))*100)
-                break
+                return((int(n)/int(d))*100)
+
         except ValueError:
             pass
         except ZeroDivisionError:
