@@ -1,5 +1,5 @@
-def main():
-    print(value("hello"))
+# def main():
+#     print(value("hello"))
 
 def value(greet):
 
@@ -14,5 +14,5 @@ def value(greet):
         x="$100"
     return x
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
