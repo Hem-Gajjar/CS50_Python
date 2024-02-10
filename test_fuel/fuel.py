@@ -4,7 +4,7 @@ def main():
     gauge(x)
 
 def gauge(x):
-    x = round(x)
+    # x = round(x)
     if(x>=99):
         print("F")
     elif(x<=1):
@@ -24,7 +24,7 @@ def convert():
                     continue
                 if isinstance(n,float):
                     continue
-                return((int(n)/int(d))*100)
+                return(round((int(n)/int(d))*100))
 
         except ValueError:
             pass
