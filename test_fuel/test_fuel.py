@@ -15,9 +15,9 @@ def test_prompt():
         assert convert(1/3) == "33%"
         assert convert(2/3) == "67%"
     except TypeError:
-        pass
+        raise(TypeError)
     except ZeroDivisionError:
-        pass
+        raise(ZeroDivisionError)
 
 def test_EandF():
     try:
@@ -26,9 +26,9 @@ def test_EandF():
         assert convert(100/100) == "F"
         assert convert(99/100) == "F"
     except TypeError:
-        pass
+        raise(TypeError)
     except ZeroDivisionError:
-        pass
+        raise(ZeroDivisionError)
 
 def test_reprompt():
     try:
@@ -39,7 +39,7 @@ def test_reprompt():
         assert convert(3/5.5) is None
         assert convert(5-10) is None
     except TypeError:
-        pass
+        raise(TypeError)
     except ZeroDivisionError:
-        pass
+        raise(ZeroDivisionError)
 
