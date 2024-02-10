@@ -25,9 +25,9 @@ def convert():
                 gauge((int(n)/int(d))*100)
                 break
         except ValueError:
-            pass
+            raise
         except ZeroDivisionError:
-            pass
+            raise
 
 
 
