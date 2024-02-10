@@ -1,5 +1,5 @@
 def main():
-    print(value("Hii"))
+    print(value("namaster"))
 
 def value(greet):
 
