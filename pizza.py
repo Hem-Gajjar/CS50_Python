@@ -22,6 +22,7 @@ try:
         for pizza,small,large in reader:
             table.append([pizza,small,large])
 
+        table.()
     print(tabulate(table,headers=["Sicilian Pizza","Small","Large"],tablefmt="grid"))
 
 except FileNotFoundError:
