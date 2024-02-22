@@ -31,8 +31,8 @@ try:
         with open("regular.csv") as file:
             reader = csv.reader(file)
 
-            for a,b,c in reader:
-                table.append([a,b,c])
+            for a in reader:
+                table.append(a)
 
             table.pop(0)
         print(tabulate(table,headers=["Regular Pizza","Small","Large"],tablefmt="grid"))
