@@ -4,4 +4,5 @@ count = len(sys.argv)
 file_name = sys.argv[1]
 name,ext =  file_name.split(".")
 
-print(name,ext)
+if count < 2:
+    sys.exit("Too few command-line arguments")
