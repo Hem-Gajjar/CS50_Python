@@ -1,5 +1,6 @@
 import sys
 import csv
+import tabulate
 
 count = len(sys.argv)
 file_name = sys.argv[1]
@@ -16,7 +17,7 @@ try:
     with open(file_name) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            print({row["Sicilian Pizza"],row["Small"],row["Large"]})
+            print(tabulate(row,"Sicilian Pizza","Small","Large",tablefmt="grid"))
 
 except FileNotFoundError:
     sys.exit("File does not exist")
