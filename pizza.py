@@ -18,15 +18,23 @@ elif ext != "csv":
 
 
 try:
-    with open(file_name) as file:
-        reader = csv.reader(file)
+    if file_name == "sicilian.csv":
+        with open("sicilian.csv") as file:
+            reader = csv.reader(file)
 
-        for row in reader:
-            print(row[0])
-            table.append([row[0],row[1],row[2]])
+            for row in reader:
+                table.append([row[0],row[1],row[2]])
 
-        table.pop(0)
-    print(tabulate(table,headers=["Sicilian Pizza","Small","Large"],tablefmt="grid"))
+            table.pop(0)
+        print(tabulate(table,headers=["Sicilian Pizza","Small","Large"],tablefmt="grid"))
+    else:
+        with open("regular.csv") as file:
+            reader = csv.reader(file)
 
+            for row in reader:
+                table.append([row[0],row[1],row[2]])
+
+            table.pop(0)
+        print(tabulate(table,headers=["Regular Pizza","Small","Large"],tablefmt="grid"))
 except FileNotFoundError:
     sys.exit("File does not exist")
