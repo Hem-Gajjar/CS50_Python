@@ -20,8 +20,9 @@ try:
         reader = csv.reader(file)
         for pizza,small,large in reader:
             table.append({"pizza":pizza,"small":small,"large":large})
+            table.append({"pizza":pizza,"small":small,"large":large})
 
-    print(tabulate(table,tablefmt="grid"))
+    print(tabulate(table,headers=["Sicilian Pizza","Small","Large"],tablefmt="grid"))
 
 except FileNotFoundError:
     sys.exit("File does not exist")
