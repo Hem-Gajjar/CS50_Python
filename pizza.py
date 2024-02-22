@@ -1,6 +1,6 @@
 import sys
 import csv
-import tabulate
+from tabulate import tabulate
 
 table= []
 
@@ -19,8 +19,9 @@ try:
     with open(file_name) as file:
         reader = csv.reader(file)
         for pizza,small,large in reader:
-            table.append()
-            # print(tabulate(row,"Sicilian Pizza","Small","Large",tablefmt="grid"))
+            table.append({"pizza":pizza,"small":small,"large":large})
+
+    print(tabulate(table,tablefmt="grid"))
 
 except FileNotFoundError:
     sys.exit("File does not exist")
