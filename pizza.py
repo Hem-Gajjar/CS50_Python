@@ -18,6 +18,7 @@ elif ext != "csv":
 try:
     with open(file_name) as file:
         reader = csv.reader(file)
+
         for pizza,small,large in reader:
             table.append([pizza,small,large])
 
