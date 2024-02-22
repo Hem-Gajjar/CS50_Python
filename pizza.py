@@ -13,7 +13,9 @@ elif ext != "csv":
 
 try:
     with open(file_name) as file:
-        for line in file:
-            print(line)
+        reader = csv.DictReader(file)
+        for row in reader:
+            print({""})
+
 except FileNotFoundError:
     sys.exit("File does not exist")
