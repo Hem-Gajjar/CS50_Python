@@ -1,4 +1,5 @@
 import sys
+import csv
 
 count = len(sys.argv)
 file_name = sys.argv[1]
@@ -15,7 +16,7 @@ try:
     with open(file_name) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            print({""})
+            print({"Sicilian Pizza":row["Sicilian Pizza"],row["Small"],row["Large"]})
 
 except FileNotFoundError:
     sys.exit("File does not exist")
