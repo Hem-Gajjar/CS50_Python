@@ -15,6 +15,8 @@ elif count > 2:
 elif ext != "csv":
     sys.exit("Not a CSV file")
 
+
+
 try:
     with open(file_name) as file:
         reader = csv.reader(file)
