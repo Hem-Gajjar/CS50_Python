@@ -2,6 +2,8 @@ import sys
 import csv
 import tabulate
 
+table= []
+
 count = len(sys.argv)
 file_name = sys.argv[1]
 name,ext =  file_name.split(".")
@@ -16,8 +18,9 @@ elif ext != "csv":
 try:
     with open(file_name) as file:
         reader = csv.reader(file)
-        for row in reader:
-            print(tabulate(row,"Sicilian Pizza","Small","Large",tablefmt="grid"))
+        for pizza,small,large in reader:
+            table.append()
+            # print(tabulate(row,"Sicilian Pizza","Small","Large",tablefmt="grid"))
 
 except FileNotFoundError:
     sys.exit("File does not exist")
