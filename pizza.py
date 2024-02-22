@@ -22,6 +22,7 @@ try:
         reader = csv.reader(file)
 
         for row in reader:
+            print(row[0])
             table.append([row[0],row[1],row[2]])
 
         table.pop(0)
