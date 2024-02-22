@@ -1,3 +1,5 @@
+#hello
+
 str = input()
 str = str.replace(":)","🙂")
 str = str.replace(":(","🙁")

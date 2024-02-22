@@ -19,7 +19,12 @@ try:
         for line in file:
             if line.startswith("#"):
                 pass
-            elif :
-            # print(line.rstrip())
+            elif line.lstrip() == "":
+                pass
+            else:
+                loc += 1
+
 except FileNotFoundError:
     sys.exit("File does not exist")
+
+print(loc)
