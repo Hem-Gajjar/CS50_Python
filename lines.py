@@ -17,7 +17,7 @@ try:
     with open(file_name,"r") as file:
         loc = 0
         for line in file:
-            if line.startswith("#") or line.startswith('"""') :
+            if line.startswith("#") or line.startswith('"""')or line.startswith("'''") :
                 pass
             elif line.lstrip() == "":
                 pass
