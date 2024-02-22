@@ -6,3 +6,4 @@ name,ext =  file_name.split(".")
 
 if count < 2:
     sys.exit("Too few command-line arguments")
+elif 
