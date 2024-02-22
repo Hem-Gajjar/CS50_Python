@@ -12,19 +12,22 @@ elif count > 2:
 elif ext != "py":
     sys.exit("Not a Python file")
 
+def count_loc():
+    try:
+        with open(file_name,"r") as file:
+            loc = 0
+            for line in file:
+                if line.lstrip().startswith("#"):
+                    pass
+                elif line.lstrip() == "":
+                    pass
+                elif line.lstrip().startswith('"""')or line.lstrip().startswith("'''"):
+                    loc += 1
+                else:
+                    loc += 1
 
-try:
-    with open(file_name,"r") as file:
-        loc = 0
-        for line in file:
-            if line.lstrip().startswith("#") or line.lstrip().startswith('"""')or line.lstrip().startswith("'''") :
-                pass
-            elif line.lstrip() == "":
-                pass
-            else:
-                loc += 1
+    except FileNotFoundError:
+        sys.exit("File does not exist")
 
-except FileNotFoundError:
-    sys.exit("File does not exist")
-
-print(loc)
+    return loc
+print(count_loc())
