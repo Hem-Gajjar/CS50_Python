@@ -16,7 +16,7 @@ try:
     with open(file_name) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            print({"Sicilian Pizza":row["Sicilian Pizza"],row["Small"],row["Large"]})
+            print({row["Sicilian Pizza"],row["Small"],row["Large"]})
 
 except FileNotFoundError:
     sys.exit("File does not exist")
