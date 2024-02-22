@@ -21,8 +21,8 @@ try:
     with open(file_name) as file:
         reader = csv.reader(file)
 
-        for pizza,small,large in reader:
-            table.append([pizza,small,large])
+        for row in reader:
+            table.append([row[0],row[1],row[2]])
 
         table.pop(0)
     print(tabulate(table,headers=["Sicilian Pizza","Small","Large"],tablefmt="grid"))
