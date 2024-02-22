@@ -9,4 +9,11 @@ if count < 2:
 elif count > 2:
     sys.exit("Too many command-line arguments")
 elif ext != "csv":
-    sys.
+    sys.exit("Not a CSV file")
+
+try:
+    with open(file_name) as file:
+        for line in file:
+            print(line)
+except FileNotFoundError:
+    sys.exit("File does not exist")
