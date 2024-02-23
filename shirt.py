@@ -19,12 +19,14 @@ except:
 
 ext1 = ext1.lower()
 ext2 = ext2.lower()
-print(ext1)
-print(ext2)
+# print(ext1)
+# print(ext2)
 
 
 if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == "jpeg" or ext2 == "png":
-    print("done")
+    if ext1 != ext2:
+        sys.exit("Input and output have different extensions")
+    # else:
 
 else:
     sys.exit("Invalid input")
