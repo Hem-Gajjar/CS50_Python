@@ -24,11 +24,11 @@ except FileNotFoundError:
 
 
 try:
-    with open(file2,"a") as two:
+    with open(file2) as two:
         writer= csv.DictWriter(two,fieldnames=["first","last","house"])
         writer.writeheader()
         for student in students:
-            last,first = student['first'].split(",")
+            last,first = student['first'].split(", ")
             house = student['house']
             writer.writerow({"first":first,"last":last,"house":house})
 
