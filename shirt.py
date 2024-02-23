@@ -23,9 +23,9 @@ print(ext1)
 print(ext2)
 
 
-if ext1 != "jpg" or ext1 != "jpeg" or ext1 != "png" or ext2 != "jpg" or ext2 != "jpeg" or ext2 != "png":
-    print("jjj")
-    sys.exit()
+if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == "jpeg" or ext2 == "png":
+    print("done")
 
 else:
-    print("done")
+    sys.exit("Invalid input")
+
