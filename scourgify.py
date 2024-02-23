@@ -24,7 +24,7 @@ except FileNotFoundError:
 
 
 try:
-    with open(file2) as two:
+    with open(file2,"w") as two:
         writer= csv.DictWriter(two,fieldnames=["first","last","house"])
         writer.writeheader()
         for student in students:
