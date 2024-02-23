@@ -25,8 +25,9 @@ except FileNotFoundError:
 
 try:
     with open(file2,"a") as two:
+        writer= csv.DictWriter(two,fieldnames=["first","last","house"])
+        writer.writeheader()
         for student in students:
-            writer= csv.DictWriter(two,fieldnames=["first","last","house"])
             last,first = student['first'].split(",")
             house = student['house']
             writer.writerow({"first":first,"last":last,"house":house})
