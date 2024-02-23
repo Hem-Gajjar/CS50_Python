@@ -18,15 +18,19 @@ try:
         for row in reader:
             students.append({"first":row["name"],"house":row["house"]})
 
-    with open(file2) as two:
-        for student in students:
-            writer= csv.DictWriter(two,fieldnames=["first","last","house"])
-            # first,last = student['name'].split(",")
-            # print(student['name'])
-            # house = student['house']
-            # writer.writerow({"first":first,"last":last,"house":house})
-            print(student['name'])
 
 except FileNotFoundError:
-    sys.exit("Could not read file")
+    sys.exit("Could not read",file1)
+
+
+try:
+    with open(file2,"a") as two:
+        for student in students:
+            writer= csv.DictWriter(two,fieldnames=["first","last","house"])
+            first,last = student['first'].split(",")
+            house = student['house']
+            writer.writerow({"first":first,"last":last,"house":house})
+
+except FileNotFoundError:
+    sys.exit("Could not read",file2)
 
