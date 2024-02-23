@@ -2,9 +2,9 @@ import sys
 
 count = len(sys.argv)
 
-if count < 2:
+if count < 3:
     sys.exit("Too few command-line arguments")
-elif count > 2:
+elif count > 3:
     sys.exit("Too many command-line arguments")
 
 filename1 = sys.argv[1]
@@ -21,3 +21,5 @@ ext2 = ext2.lower()
 
 if ext1 != "jpg" or ext1 != "jpeg" or ext1 != "png" or ext2 != "jpg" or ext2 != "jpeg" or ext2 != "png":
     sys.exit()
+else:
+    print("done")
