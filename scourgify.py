@@ -13,21 +13,23 @@ file2 = sys.argv[2]
 students = []
 
 try:
-    with open(file1) as file:
-        reader = csv.DictReader(file)
+    with open(file1) as one:
+        reader = csv.DictReader(one)
         for row in reader:
             students.append({"first":row["name"],"house":row["house"]})
 
-    for student in students:
-        print(f"{student['name']},{student['house']}")
+    with open(file2,"a") as two:
+        for student in students:
+            writer= csv.DictWriter(two,fieldnames=["first","last","house"])
+            first,last = student['name'].split(",")
+            house = student['house']
+            writer.writerow({"first":first,"last":last,"house":house})
 
 except FileNotFoundError:
     sys.exit("Could not read",file1)
 
 
 try:
-    with open(file2,"a") as file:
-        writer= csv.DictWriter(file,fieldnames=["first","last","house"])
-        writer.writerow({"first":first})
+
 except FileNotFoundError:
     sys.exit("Could not read",file2)
