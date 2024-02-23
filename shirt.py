@@ -1,5 +1,5 @@
 import sys
-from PIL import Image
+from PIL import Image,ImageOps
 
 count = len(sys.argv)
 
