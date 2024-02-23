@@ -27,7 +27,7 @@ try:
     with open(file2,"a") as two:
         for student in students:
             writer= csv.DictWriter(two,fieldnames=["first","last","house"])
-            first,last = student['first'].split(",")
+            last,first = student['first'].split(",")
             house = student['house']
             writer.writerow({"first":first,"last":last,"house":house})
 
