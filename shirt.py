@@ -1,4 +1,5 @@
 import sys
+from PIL import Image
 
 count = len(sys.argv)
 
@@ -26,7 +27,8 @@ ext2 = ext2.lower()
 if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == "jpeg" or ext2 == "png":
     if ext1 != ext2:
         sys.exit("Input and output have different extensions")
-    # else:
+    else:
+        
 
 else:
     sys.exit("Invalid input")
