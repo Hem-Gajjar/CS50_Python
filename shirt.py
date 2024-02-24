@@ -25,22 +25,32 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
     if ext1 != ext2:
         sys.exit("Input and output have different extensions")
     else:
-        man = Image.open(sys.argv[])
+        man = Image.open(sys.argv[1])
+        shirt = Image.open("shirt.png")
 
+        size = shirt.size
+        man.size = size
 
+        final = Image.open(sys.argv[2])
+
+        final.paste(man,shirt)
+        name = sys.argv[2]
+        final.save(
+            name,save_all=True
+        )
 else:
     sys.exit("Invalid input")
-***************************
-import sys
+# ***************************
+# import sys
 
-from PIL import Image
+# from PIL import Image
 
-images= []
+# images= []
 
-for arg in sys.argv[1:]:
-    image= Image.open(arg)
-    images.append(image)
+# for arg in sys.argv[1:]:
+#     image= Image.open(arg)
+#     images.append(image)
 
-images[0].save(
-    "bird.gif" , save_all=True, append_images=[images[1]],duration=200,loop=0
-)
+# images[0].save(
+#     "bird.gif" , save_all=True, append_images=[images[1]],duration=200,loop=0
+# )
