@@ -31,11 +31,11 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         size = shirt.size
         man.thumbnail(size)
 
-        final = Image.open(sys.argv[2])
 
-        final.paste(man,shirt)
+
+        man.paste(man,shirt)
         name = sys.argv[2]
-        final.save(
+        man.save(
             name,save_all=True
         )
 else:
