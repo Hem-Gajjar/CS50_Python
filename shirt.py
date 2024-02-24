@@ -32,7 +32,7 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         size = shirt.size
         man.thumbnail(size)
         # overlay file
-        man.paste(man,shirt)
+        man.paste(shirt,(0,0),mask=shirt)
         name = sys.argv[2]
         man.save(
             name,save_all=True
