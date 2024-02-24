@@ -29,7 +29,7 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         shirt = Image.open("shirt.png")
 
         size = shirt.size
-        man.size = size
+        man.thumbnail(size)
 
         final = Image.open(sys.argv[2])
 
