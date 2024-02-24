@@ -33,7 +33,8 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         shirt = shirt.resize(size)
         # overlay file
         man.paste(shirt,(0,0),mask=shirt)
-        name = sys.argv[2]
+        name,ext = sys.argv[2].split(".")
+        name = name+".jpg"
         man.save(
             name,save_all=True
         )
