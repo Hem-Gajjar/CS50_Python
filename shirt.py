@@ -33,8 +33,7 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         muppet = ImageOps.fit(imagefile,size)
         # overlay file
         muppet.paste(shirtfile,shirtfile)
-        # name,ext = sys.argv[2].split(".")
-        # name = name+".jpg"
+        # save file
         name=sys.argv[2]
         muppet.save(
             name
