@@ -25,14 +25,13 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
     if ext1 != ext2:
         sys.exit("Input and output have different extensions")
     else:
+        # open both files
         man = Image.open(sys.argv[1])
         shirt = Image.open("shirt.png")
-
+        # resize file
         size = shirt.size
         man.thumbnail(size)
-
-
-
+        # overlay file
         man.paste(man,shirt)
         name = sys.argv[2]
         man.save(
