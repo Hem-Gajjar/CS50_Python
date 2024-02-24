@@ -37,6 +37,10 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         image = Image.open(sys.argv[2])
         image.paste(shirt,image)
 
+        
+        image.save(
+            "shirt.png",save_all=True, append_images=[image]
+        )
 else:
     sys.exit("Invalid input")
 
