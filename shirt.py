@@ -30,7 +30,7 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         shirt = Image.open("shirt.png")
         # resize file
         size = shirt.size
-        man.thumbnail(size)
+        man = man.resize(size)
         # overlay file
         man.paste(shirt,(0,0),mask=shirt)
         name = sys.argv[2]
