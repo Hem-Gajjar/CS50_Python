@@ -33,6 +33,8 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
 
         shirt = Image.open("shirt.png")
         size = shirt.size
+
+        image = Image.open(sys.argv[2])
         photo.paste(shirt,shirt)
 
 else:
