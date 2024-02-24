@@ -26,16 +26,17 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         sys.exit("Input and output have different extensions")
     else:
         # open both files
-        man = Image.open(sys.argv[1])
-        shirt = Image.open("shirt.png")
+        imagefile = Image.open(sys.argv[1])
+        shirtfile = Image.open("shirt.png")
         # resize file
-        muppet = ImageOps.fit(man,shirt.size,method=0,bleed=0.0,centering=(0,0))
+        size = shirtfile.size
+        muppet = ImageOps.fit(imagefile,size)
         # overlay file
-        muppet.paste(shirt,shirt)
+        muppet.paste(shirtfile,shirtfile)
         # name,ext = sys.argv[2].split(".")
         # name = name+".jpg"
         name=sys.argv[2]
-        man.save(
+        muppet.save(
             name
         )
 else:
