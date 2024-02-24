@@ -39,7 +39,7 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
 
 
         image.save(
-            "new.png",save_all=True, append_images=[image]
+            "new.png",save_all=True
         )
 else:
     sys.exit("Invalid input")
