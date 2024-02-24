@@ -29,14 +29,14 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         man = Image.open(sys.argv[1])
         shirt = Image.open("shirt.png")
         # resize file
-        muppet = ImageOps.fit(man,man.size,method=0,bleed=0.0,centering=(0,0))
+        muppet = ImageOps.fit(man,shirt.size,method=0,bleed=0.0,centering=(0,0))
         # overlay file
         muppet.paste(shirt,shirt)
         # name,ext = sys.argv[2].split(".")
         # name = name+".jpg"
         name=sys.argv[2]
         man.save(
-            name,save_all=True
+            name
         )
 else:
     sys.exit("Invalid input")
