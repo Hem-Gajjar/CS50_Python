@@ -29,9 +29,9 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
         man = Image.open(sys.argv[1])
         shirt = Image.open("shirt.png")
         # resize file
-        man = ImageOps.fit(man,shirt.size,method=0,bleed=0.0,centering=(0,0))
+        shirt = ImageOps.fit(man,shirt.size,method=0,bleed=0.0,centering=(0,0))
         # overlay file
-        man.paste(shirt,(0,0),mask=shirt)
+        man.paste(shirt,(0,100),mask=shirt)
         # name,ext = sys.argv[2].split(".")
         # name = name+".jpg"
         name=sys.argv[2]
