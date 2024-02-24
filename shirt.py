@@ -25,13 +25,14 @@ if ext1 == "jpg" or ext1 == "jpeg" or ext1 == "png" or ext2 == "jpg" or ext2 == 
     if ext1 != ext2:
         sys.exit("Input and output have different extensions")
     else:
-        images = []
+        # images = []
 
-        for arg in sys.argv[1:]:
-            image = Image.open(arg)
-            images.append(image)
+        # for arg in sys.argv[1:]:
+        #     image = Image.open(arg)
+        #     images.append(image)
 
-
+        shirt = Image.open("shirt.png")
+        
 
 else:
     sys.exit("Invalid input")
