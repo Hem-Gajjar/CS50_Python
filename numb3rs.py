@@ -9,9 +9,9 @@ def main():
 def validate(ip):
     flag = False
     if re.search(r"^([0-2]|[0-5]|[0-5])+\.([0-2]|[0-5]|[0-5])+\.([0-2]|[0-5]|[0-5])+\.([0-2]|[0-5]|[0-5])$",ip):
-        print("Valid")
+        print("True")
     else:
-        print("Invalid")
+        print("False")
 
 
 
