@@ -20,8 +20,8 @@ def convert(s):
 
 def new_format(hour,minute,am_pm):
     if am_pm =="PM":
-        if int(hour) = 12
-        new_hour = 12
+        if int(hour) == 12:
+            new_hour = 12
         else:
             new_hour = int(hour) + 12
     else:
@@ -33,7 +33,7 @@ def new_format(hour,minute,am_pm):
     if minute == None:
         new_minute = ":00"
         new_time = f"{new_hour:02}"+new_minute
-    else
+    else:
         new_time = f"{new_hour:02}"+":"+minute
     return new_time
 if __name__ == "__main__":
