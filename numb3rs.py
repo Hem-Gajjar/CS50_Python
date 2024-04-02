@@ -2,16 +2,18 @@ import re
 import sys
 
 def main():
-    ip = input("IPv4 Address:")
-    validate(ip)
+     print(validate(input("IPv4 Address: ")))
 
 def validate(ip):
 
     if re.search(r"^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$",ip):
-        print("True")
+        numbers = ip.split(".")
+        for n in numbers:
+            if int(n)<0 or int(n)>255:
+                return False
+        return True
     else:
-        print("False")
-
+        return False
 
 
 if __name__ == "__main__":
