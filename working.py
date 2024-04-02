@@ -13,10 +13,12 @@ def convert(s):
         print(our_groups)
         try:
             start = our_groups[1]
-            start_hour,start_min = start.split(":")
+            if re.search("([0-9]:[0-9]*)",start):
+                start_hour,start_min = start.split(":")
             start_zone = our_groups[4]
             end = our_groups[5]
-            end_hour,end_min = end.split(":")
+            if re.search("([0-9]:[0-9]*)",end):
+                end_hour,end_min = end.split(":")
             end_zone = our_groups[8]
         except:
             pass
