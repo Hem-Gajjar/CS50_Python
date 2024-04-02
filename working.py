@@ -7,9 +7,10 @@ def main():
 
 
 def convert(s):
-    is isCorrect = re.search(r"^(([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M) to (([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M)$",s)
+    isCorrect = re.search(r"^(([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M) to (([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M)$",s)
     if isCorrect:
-        pieces = isCorrectFormat.groups()
+        pieces = isCorrect.groups()
+        if int(p)
         return pieces
     else:
         raise ValueError
