@@ -3,14 +3,23 @@ try:
 except:
     from numb3rs import validate
 
-def test_one():
-    assert validate("2.2.2.2")
-    assert validate("0.0.0.0")
+def main():
+    test_format()
+    test_range()
 
-def test_two():
-    assert validate("22.22.22.22")
+def test_format():
+    assert validate(r"1.1.1.1") == True
+    assert validate(r"1.1.1")== False
+    assert validate(r"1.1")== False
+    assert validate(r"1")== False
 
-def test_three():
-    assert validate("222.222.222.222")
-    assert validate("223.224.225.226")
-    
+
+def test_range():
+    assert validate(r"255.255.255.255")==True
+    assert validate(r"0.0.0.0")==True
+    assert validate(r"2222.2.2.2")==False
+    assert validate(r"2.2.2.2")==True
+
+
+if __name__ == "__main__":
+    main()
