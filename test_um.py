@@ -8,6 +8,7 @@ def main():
 def test_ulcase():
     assert count("Um, Thanks for the album")==1
     assert count("Um, thanks, um...")==2
+    assert count("Um mum Um um")==3
 def test_uminword():
     assert count("yummy") == 0
 def test_umalone():
