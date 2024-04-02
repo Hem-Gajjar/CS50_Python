@@ -12,8 +12,10 @@ def test_ulcase():
 
 def test_uminword():
     assert count("yummi") == 0
+    
 def test_umalone():
     assert count("Hello um world") == 1
     assert count("um?") == 1
+
 if __name__ == "__main__":
     main()
