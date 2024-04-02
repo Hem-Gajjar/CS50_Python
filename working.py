@@ -19,6 +19,7 @@ def convert(s):
         print(start_zone)
         print(end)
         print(end_zone)
+        final_time=""
         
 
 if __name__ == "__main__":
