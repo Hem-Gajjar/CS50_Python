@@ -12,15 +12,17 @@ def convert(s):
         our_groups = get_groups.groups()
         print(our_groups)
         start = our_groups[1]
+        start_hour,start_min = start.split(":")
         start_zone = our_groups[4]
         end = our_groups[5]
+        end_hour,end_min = end.split(":")
         end_zone = our_groups[8]
         print(start)
         print(start_zone)
         print(end)
         print(end_zone)
         final_time=""
-        
+
 
 if __name__ == "__main__":
     main()
