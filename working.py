@@ -20,15 +20,24 @@ def convert(s):
                 if(start_zone=="AM"):
                     final_start_hour = 0 + int(start_hour)
                     final_start_min = start_min
-
+                else:
+                    final_start_hour = 12 + int(start_hour)
+                    final_start_min = start_min
 
             end = our_groups[5]
             if re.search("([0-9]:[0-9]*)",end):
                 end_hour,end_min = end.split(":")
-                
-            end_zone = our_groups[8]
+                end_zone = our_groups[8]
+                if(end_zone=="AM"):
+                    final_end_hour = 0 + int(end_hour)
+                    final_end_min = end_min
+                else:
+                    final_end_hour = 12 + int(end_hour)
+                    final_end_min = end_min
         except:
             pass
+        final = str(final_start_hour+":"+final_start_min+" to "+final_end_hour+":"+final_end_min)
+        return (final)
 
 
 
