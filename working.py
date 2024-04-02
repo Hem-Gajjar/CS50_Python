@@ -20,11 +20,12 @@ def convert(s):
                 if(start_zone=="AM"):
                     final_start_hour = 0 + int(start_hour)
                     final_start_min = start_min
-                    
+
 
             end = our_groups[5]
             if re.search("([0-9]:[0-9]*)",end):
                 end_hour,end_min = end.split(":")
+                
             end_zone = our_groups[8]
         except:
             pass
