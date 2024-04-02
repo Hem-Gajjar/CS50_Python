@@ -11,7 +11,7 @@ def convert(s):
         get_groups = re.search(r"(([0-9].*)((:[0-9])*) ([A-Z]+) to ([0-9].*)((:[0-9])*) ([A-Z]+))",s)
         our_groups = get_groups.groups()
         print(our_groups)
-        final_start_hour,final_start_min,final_end_hour,final_end_min
+        # final_start_hour,final_start_min,final_end_hour,final_end_min
         try:
             start = our_groups[1]
             if re.search("([0-9]:[0-9]*)",start):
@@ -36,7 +36,7 @@ def convert(s):
                     final_end_min = end_min
         except:
             pass
-        final = str(final_start_hour+":"+final_start_min+" to "+final_end_hour+":"+final_end_min)
+        final = final_start_hour+":"+final_start_min+" to "+final_end_hour+":"+final_end_min
         return (final)
 
 
