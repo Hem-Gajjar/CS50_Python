@@ -33,7 +33,7 @@ def new_format(hour,minute,am_pm):
     if minute == None:
         new_minute = ":00"
         new_time = f"{new_hour:02}"+new_minute
-    else:
+    else:submit50 cs50/problems/2022/python/working
         new_time = f"{new_hour:02}"+":"+minute
     return new_time
 if __name__ == "__main__":
