@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    mystring = re.findall("\b\W*um\W",s)
+    mystring = re.findall(r"\b\W*um\W",s)
     return len(mystring)
 
 
