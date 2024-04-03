@@ -19,6 +19,6 @@ def minutes_lived(year,month,day):
     diff = tday - dt
     minutes = int(diff.total_seconds()/60)
     msg = p.number_to_words(minutes, andword="") + " minutes"
-    return msg
+    return msg.capitalize()
 if __name__ == "__main__":
     main()
