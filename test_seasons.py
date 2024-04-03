@@ -1,15 +1,15 @@
-from seasons import check_dob
-from seasons import convert_to_words
+from seasons import minutes_lived
+
 
 def main():
-    test_check_dob()
-    test_convert_to_words()
+    test_1()
+    test_2()
 
-def test_check_dob():
-    assert check_dob("2004-09-10") == ("2004","09","10")
-    assert check_dob("2004-9-9") == None
-    assert check_dob("September 10, 2004") == None
+def test_1():
+    assert minutes_lived(2003,5,17) == "Ten million, fifty-eight thousand, four hundred minutes"
+    assert minutes_lived(2000,2,1) == "Eleven million, seven hundred wighty-seven thousand, eight hundred forty minutes"
 
-
+def test_2():
+    assert minutes_lived(23,1,2000) == "Invalid Date"
 if __name__ == "__main__":
     main()
