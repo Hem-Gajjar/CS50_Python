@@ -7,9 +7,13 @@ def main():
     birth_date = input("Date of birth: ")
     try:
         year,month,day = check_dob(birth_date)
-        print(year,month,day)
     except:
         sys.exit("Invalid Date")
+    date_of_birth = date(int(year),int(month),int(day))
+    date_of_today = date.today()
+    diff = date_of_today - date_of_birth
+    total_minutes = diff.days * 24*60
+    print(total_minutes)
 
 def check_dob(dob):
     if re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$",dob):
