@@ -10,9 +10,12 @@ def main():
         year,month,day = check_dob(birth_date)
     except:
         sys.exit("Invalid Date")
+    convert_to_words()
+
+
+def convert_to_words():
     date_of_birth = date(int(year),int(month),int(day))
     date_of_today = date.today()
-    print(date_of_today)
     diff = date_of_today - date_of_birth
     total_minutes = diff.days * 24*60
     output = p.number_to_words(total_minutes, andword="")
