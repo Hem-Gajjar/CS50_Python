@@ -16,7 +16,7 @@ def main():
     total_minutes = diff.days * 24*60
     output = p.number_to_words(total_minutes, andword="")
     print(output.capitalize() + " minutes")
-
+    
 def check_dob(dob):
     if re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$",dob):
         year,month,day = dob.split("-")
