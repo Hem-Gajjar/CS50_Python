@@ -6,14 +6,14 @@ p = inflect.engine()
 
 def main():
     birth_date = input("Date of birth: ")
+    convert_to_words(birth_date)
+
+
+def convert_to_words(birth_date):
     try:
         year,month,day = check_dob(birth_date)
     except:
         sys.exit("Invalid Date")
-    convert_to_words()
-
-
-def convert_to_words():
     date_of_birth = date(int(year),int(month),int(day))
     date_of_today = date.today()
     diff = date_of_today - date_of_birth
