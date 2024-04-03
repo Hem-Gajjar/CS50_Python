@@ -11,7 +11,8 @@ def main():
     except:
         sys.exit("Invalid Date")
     date_of_birth = date(int(year),int(month),int(day))
-    date_of_today = date.today()
+    # date_of_today = 2032-01-01
+    date_of_today = datetime.date.today()
     diff = date_of_today - date_of_birth
     total_minutes = diff.days * 24*60
     output = p.number_to_words(total_minutes, andword="")
