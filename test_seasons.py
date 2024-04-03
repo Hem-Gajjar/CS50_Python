@@ -2,6 +2,7 @@ from seasons import check_dob
 
 def main():
     test_check_dob()
+    
 
 def test_check_dob():
     assert check_dob("2004-09-10") == ("2004","09","10")
