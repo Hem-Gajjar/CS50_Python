@@ -16,6 +16,7 @@ def minutes_lived(year,month,day):
 
     tday = date.today()
     diff = tday - dt
+    minutes = int(diff.total_seconds()/60)
     
 if __name__ == "__main__":
     main()
