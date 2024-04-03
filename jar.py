@@ -20,7 +20,7 @@ class Jar:
     def withdraw(self, n):
         if self.size<n:
             raise ValueError("There are less cookies than asked to remove")
-        self.size -= n
+        self._size -= n
 
 
     @property
