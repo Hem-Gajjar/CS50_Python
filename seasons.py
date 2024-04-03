@@ -13,7 +13,7 @@ def minutes_lived(year,month,day):
     try:
         dt = date(int(year),int(month),int(day))
     except ValueError:
-        return "Invalid Data"
+        return "Invalid Date"
 
     tday = date.today()
     diff = tday - dt
