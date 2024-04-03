@@ -1,7 +1,8 @@
 from datetime import date
 import sys
 import re
-
+import inflect
+p = inflect.engine()
 
 def main():
     birth_date = input("Date of birth: ")
@@ -13,7 +14,8 @@ def main():
     date_of_today = date.today()
     diff = date_of_today - date_of_birth
     total_minutes = diff.days * 24*60
-    print(total_minutes)
+    output = number_to_words(total_minutes)
+    print(output.capitalize() + "minutes")
 
 def check_dob(dob):
     if re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$",dob):
