@@ -18,7 +18,7 @@ class Movie():
     def addmymovie(self):
         myfile = open("movies.csv","a")
         mystring = str(
-            f"\""+self.imdb_id+f"\","
+            f"\n\""+self.imdb_id+f"\","
             f"\""+self.title+f"\","
             f"\""+self.release_year+f"\","
             f"\""+self.release_date+f"\","
@@ -27,7 +27,7 @@ class Movie():
             f"\""+self.actors+f"\","
             f"\""+self.directors+f"\","
             f"\""+self.sequel+f"\","
-            f"\""+self.hitflop+f"\"\n")
+            f"\""+self.hitflop+f"\"")
         x = myfile.write(mystring)
         if (x):
             return True
