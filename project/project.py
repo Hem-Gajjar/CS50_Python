@@ -123,19 +123,20 @@ def add_movie():
     imdb_id = input("Enter IMDB Id: ")
     title = input("Enter Title: ")
     release_year = input("Enter Release Year: ")
-    release_date = input("Enter Release Date: ")
+    release_date = input("Enter Release Date (DD MMM YYYY)(28 Jan 2024): ")
     genre = input("Enter Genre: ")
     writers = input("Enter Writer: ")
     actors = input("Enter Actors: ")
     directors = input("Enter Director: ")
-    sequel = input("Enter Sequel: ")
-    hitflop = input("Enter Hit-Flop Rating: ")
+    sequel = input("Enter Sequel (1 for yes,0 for no): ")
+    hitflop = input("Enter Hit-Flop Rating (between 0 to 10 inclusive): ")
+
     mymovie = Movie(imdb_id,title,release_year,release_date,genre,writers,actors,directors,sequel,hitflop)
     x = mymovie.addmymovie()
     if (x):
         print("The movie is inserted successfully!")
     else:
-        print("The movie was not inserted sorry ")
+        print("The movie was not inserted sorry")
 
 
 if __name__ == "__main__":
