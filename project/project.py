@@ -15,7 +15,9 @@ class Movie():
         self.hitflop = hitflop
 
     def addmymovie(self):
-        
+        myfile = open("movies.csv","a")
+        mystring = str(self.imdb_id+","+self.title+","+self.release_year+","+self.release_date+","+self.genre+","+self.writers+","+self.actors+","+self.directors+","+self.sequel+","+self.hitflop)
+        myfile.write(mystring)
 
 def main():
     while(1):
