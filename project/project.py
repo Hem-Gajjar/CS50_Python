@@ -44,13 +44,16 @@ def main():
             continue
         match choice:
             case 1:
-                select_by_year()
+                year = int(input("Enter the year::"))
+                select_by_year(year)
 
             case 2:
-                select_by_genre()
+                genre = input("Enter the genre to search::").capitalize()
+                select_by_genre(genre)
 
             case 3:
-                select_by_actor()
+                actor = input("Enter the actor::").capitalize()
+                select_by_actor(actor)
 
             case 4:
                 select_by_director()
@@ -67,8 +70,7 @@ def main():
             case _:
                 print("Invalid Choice")
 
-def select_by_year():
-    year = int(input("Enter the year::"))
+def select_by_year(year):
     flag = 0
     count = 1
     with open("movies.csv","r") as csvfile:
@@ -81,9 +83,12 @@ def select_by_year():
                 count += 1
     if flag == 0:
         print(f"We are sorry there are no movies in year {year} in our dataset")
+        return False
+    else:
+        return True
 
-def select_by_genre():
-    genre = input("Enter the genre to search::").capitalize()
+def select_by_genre(genre):
+
     flag = 0
     count = 1
     with open("movies.csv","r") as csvfile:
@@ -97,9 +102,12 @@ def select_by_genre():
                 count += 1
     if flag == 0:
         print(f"We are sorry there are no movies of genre {genre} in our dataset")
+        return False
+    else:
+        return True
 
-def select_by_actor():
-    actor = input("Enter the actor::").capitalize()
+def select_by_actor(actor):
+
     flag = 0
     count = 1
     with open("movies.csv","r") as csvfile:
@@ -112,6 +120,9 @@ def select_by_actor():
                 count += 1
     if flag == 0:
         print(f"We are sorry there are no movies of actor {actor} in our dataset")
+        return False
+    else:
+        return True
 
 def select_by_director():
     director = input("Enter the director (Firstname Lastname)::").capitalize()
@@ -127,6 +138,9 @@ def select_by_director():
                 count += 1
     if flag == 0:
         print(f"We are sorry there are no movies of director {director} in our dataset")
+        return False
+    else:
+        return True
 
 def add_movie():
     while(1):
