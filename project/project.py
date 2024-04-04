@@ -119,8 +119,8 @@ def add_movie():
     actors = input("Enter Actors: ")
     directors = input("Enter Director: ")
     sequel = input("Enter Sequel: ")
-    hitflop = input("Enter ")
-    mymovie = Movie()
-
+    hitflop = input("Enter Hit-Flop Rating: ")
+    mymovie = Movie(imdb_id,title,release_year,release_date,genre,writers,actors,directors,sequel,hitflop)
+    mymovie.addmymovie()
 if __name__ == "__main__":
     main()
