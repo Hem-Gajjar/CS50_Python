@@ -16,7 +16,6 @@ class Movie():
 
     #Here I have used Instance Method
     def addmymovie(self):
-
         myfile = open("movies.csv","a")
         mystring = str(
             f"\""+self.imdb_id+f"\","
