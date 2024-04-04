@@ -5,7 +5,7 @@ def main():
     while(1):
         choice = 0
         try:
-            choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) To clear screen\n(6) Exit\nEnter Choice::"))
+            choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) To clear screen\n(10) Exit\nEnter Choice::"))
         except ValueError:
             print("Invalid Input")
             continue
@@ -25,7 +25,7 @@ def main():
             case 5:
                 os.system('clear')
 
-            case 6:
+            case 10:
                 break
 
             case _:
@@ -43,7 +43,6 @@ def select_by_year():
                 flag = 1
                 print(row["title"])
                 count += 1
-
     if flag == 0:
         print(f"We are sorry there are no movies in year {year} in our dataset")
 
@@ -60,7 +59,6 @@ def select_by_genre():
                 flag = 1
                 print(f"{count}. "+row["title"] + f"({row['genre']})")
                 count += 1
-
     if flag == 0:
         print(f"We are sorry there are no movies of genre {genre} in our dataset")
 
@@ -77,7 +75,6 @@ def select_by_actor():
                 flag = 1
                 print(f"{count}. "+row["title"] + f"({row['actors']})")
                 count += 1
-
     if flag == 0:
         print(f"We are sorry there are no movies of actor {actor} in our dataset")
 
@@ -93,7 +90,6 @@ def select_by_director():
                 flag = 1
                 print(f"{count}. "+row["title"] + f"({row['directors']})")
                 count += 1
-
     if flag == 0:
         print(f"We are sorry there are no movies of director {director} in our dataset")
 
