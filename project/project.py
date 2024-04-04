@@ -159,9 +159,10 @@ def add_movie():
             print("Incorrect year format")
             continue
         break
+
     genre = input("Enter Genre: ")
-    writers = input("Enter Writer: ")
-    actors = input("Enter Actors: ")
+    writers = input("Enter Writer (separate them by |): ")
+    actors = input("Enter Actors (separate them by |): ")
     directors = input("Enter Director: ")
     sequel = input("Enter Sequel (1 for yes,0 for no): ")
     hitflop = input("Enter Hit-Flop Rating (between 0 to 10 inclusive): ")
