@@ -34,6 +34,7 @@ class Movie():
             return True
         else:
             return False
+
 def main():
     while(1):
         choice = 0
@@ -131,7 +132,7 @@ def select_by_director():
 
 def add_movie():
     imdb_id = input("Enter IMDB Id (ttXXXXXXX)(Here, X=[0-9]): ")
-    if not (re.search("(tt[0-9]{7})",imdb_id)):
+    if not (re.search("(tt[0-9]{7})",imdb_id)): # Used regular expression for correct ID format
         print("Invalid Id Format")
         return
     title = input("Enter Title: ")
