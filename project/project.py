@@ -86,7 +86,7 @@ def select_by_director():
                 count += 1
 
     if flag == 0:
-        print(f"We are sorry there are no movies of actor {director} in our dataset")
+        print(f"We are sorry there are no movies of director {director} in our dataset")
 
 
 
