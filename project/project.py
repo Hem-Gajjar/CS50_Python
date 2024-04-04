@@ -3,7 +3,10 @@ import re
 def main():
     while(1):
         choice = 0
-        choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) Exit\nEnter Choice::"))
+        try:
+            choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) Exit\nEnter Choice::"))
+        except ValueError:
+            print("Invalid Input")
         match choice:
             case 1:
                 select_by_year()
@@ -90,9 +93,6 @@ def select_by_director():
 
         if flag == 0:
             print(f"We are sorry there are no movies of director {director} in our dataset")
-    except ValueError:
-        print("Invalid Input")
-        return
 
 
 
