@@ -1,5 +1,6 @@
 import csv
 import re
+import os
 def main():
     while(1):
         choice = 0
@@ -21,12 +22,14 @@ def main():
             case 4:
                 select_by_director()
 
+            case 5:
+                os.system('clear')
+
             case 6:
                 break
 
             case _:
                 print("Invalid Choice")
-
 
 def select_by_year():
     year = int(input("Enter the year::"))
@@ -79,7 +82,6 @@ def select_by_actor():
         print(f"We are sorry there are no movies of actor {actor} in our dataset")
 
 def select_by_director():
-
     director = input("Enter the director::").capitalize()
     flag = 0
     count = 1
@@ -94,8 +96,6 @@ def select_by_director():
 
     if flag == 0:
         print(f"We are sorry there are no movies of director {director} in our dataset")
-
-
 
 if __name__ == "__main__":
     main()
