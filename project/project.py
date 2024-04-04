@@ -136,7 +136,7 @@ def add_movie():
             print("Invalid Id Format")
             continue
         flag = False
-        with open("movies.csv","r") as csvfile:
+        with open("movies.csv","r") as csvfile: # checking if same id entry exist or not
             reader =csv.DictReader(csvfile)
             for row in reader:
                     if(re.search(f".*{imdb_id}.*",row["imdbId"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
