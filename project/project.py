@@ -46,7 +46,7 @@ def select_by_genre():
         print(f"All movies of {genre} genre")
         for row in reader:
             if(re.search(f".*{genre}.*",row["genre"])):
-                print(row["title"] + f"({genre})")
+                print(row["title"] + f"({row['genre']})")
 
 def select_by_actor():
     print("Actor")
