@@ -40,7 +40,14 @@ def select_by_year():
 
 def select_by_genre():
     genre = input("Enter the genre to search::")
-    c
+    flag = 0
+    with open("movies.csv","r") as csvfile:
+        reader =csv.DictReader(csvfile)
+        print(f"All movies of {genre} genre")
+        for row in reader:
+            if(int(row["releaseYear"]) == year):
+                flag = 1
+                print(row["title"])
 
 def select_by_actor():
     print("Actor")
