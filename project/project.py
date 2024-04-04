@@ -16,24 +16,27 @@ class Movie():
 
     #Here I have used Instance Method
     def addmymovie(self):
-        myfile = open("movies.csv","a")
-        mystring = str(
-            f"\""+self.imdb_id+f"\","
-            f"\""+self.title+f"\","
-            f"\""+self.release_year+f"\","
-            f"\""+self.release_date+f"\","
-            f"\""+self.genre+f"\","
-            f"\""+self.writers+f"\","
-            f"\""+self.actors+f"\","
-            f"\""+self.directors+f"\","
-            f"\""+self.sequel+f"\","
-            f"\""+self.hitflop+f"\"")
-        x = myfile.write(mystring)
-        if (x):
-            return True
+        if(re.search("(tt\d{7})",imdb_id)):
+            myfile = open("movies.csv","a")
+            mystring = str(
+                f"\""+self.imdb_id+f"\","
+                f"\""+self.title+f"\","
+                f"\""+self.release_year+f"\","
+                f"\""+self.release_date+f"\","
+                f"\""+self.genre+f"\","
+                f"\""+self.writers+f"\","
+                f"\""+self.actors+f"\","
+                f"\""+self.directors+f"\","
+                f"\""+self.sequel+f"\","
+                f"\""+self.hitflop+f"\"")
+            x = myfile.write(mystring)
+            if (x):
+                return True
+            else:
+                return False
         else:
+            print("Invalid ID Format")
             return False
-
 def main():
     while(1):
         choice = 0
