@@ -1,27 +1,40 @@
 def main():
-    choice = 0
-    print(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor")
-    match term:
-    case pattern-1:
-         action-1
-    case pattern-2:
-         action-2
-    case pattern-3:
-         action-3
-    case _:
-        action-default
+    while(1):
+        choice = 0
+        choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) Exit\nEnter Choice::"))
+        match choice:
+            case 1:
+                select_by_year()
+
+            case 2:
+                select_by_genre()
+
+            case 3:
+                select_by_actor()
+
+            case 4:
+                select_by_director()
+
+            case 5:
+                break
+
+            case _:
+                print("Invalid Choice")
 
 
-def function_1():
-    ...
+def select_by_year():
+    print("Year")
+
+def select_by_genre():
+    print("Genre")
+
+def select_by_actor():
+    print("Actor")
+
+def select_by_director():
+    print("Director")
 
 
-def function_2():
-    ...
-
-
-def function_n():
-    ...
 
 
 if __name__ == "__main__":
