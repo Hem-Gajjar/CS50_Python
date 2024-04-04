@@ -114,7 +114,7 @@ def select_by_actor():
         print(f"We are sorry there are no movies of actor {actor} in our dataset")
 
 def select_by_director():
-    director = input("Enter the director::").capitalize()
+    director = input("Enter the director (Firstname Lastname)::").capitalize()
     flag = 0
     count = 1
     with open("movies.csv","r") as csvfile:
