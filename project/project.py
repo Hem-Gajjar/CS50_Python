@@ -131,7 +131,7 @@ def select_by_director():
 
 def add_movie():
     imdb_id = input("Enter IMDB Id (ttXXXXXXX)(Here, X=[0-9]): ")
-    if(re.search("(tt[0-9]{7})",imdb_id)):
+    if((re.search("(tt[0-9]{7})",imdb_id))):
         print("Invalid Id Format")
         return
     title = input("Enter Title: ")
