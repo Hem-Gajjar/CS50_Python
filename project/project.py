@@ -1,11 +1,24 @@
 import csv
 import re
 import os
+class Movie():
+    def __init__(self,imdb_id,title,release_year,release_date,genre,writers,actors,directors,sequel,hitflop):
+        imdb_id = self.imdb
+        title = self.title
+        release_year = self.release_year
+        release_date = self.release_date
+        genre = self.genre
+        writers = self.writers
+        actors = self.actors
+        directors = self.directors
+        sequel = self.sequel
+        hitflop = self.hitflop
+
 def main():
     while(1):
         choice = 0
         try:
-            choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) To clear screen\n(10) Exit\nEnter Choice::"))
+            choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) To clear screen\n(6) Add movie to file\n(10) Exit\nEnter Choice::"))
         except ValueError:
             print("Invalid Input")
             continue
@@ -24,6 +37,9 @@ def main():
 
             case 5:
                 os.system('clear')
+
+            case 6:
+                add_movie()
 
             case 10:
                 break
@@ -92,6 +108,19 @@ def select_by_director():
                 count += 1
     if flag == 0:
         print(f"We are sorry there are no movies of director {director} in our dataset")
+
+def add_movie():
+    imdb_id = input("Enter IMDB Id: ")
+    title = input("Enter Title: ")
+    release_year = input("Enter Release Year: ")
+    release_date = input("Enter Release Date: ")
+    genre = input("Enter Genre: ")
+    writers = input("Enter Writer: ")
+    actors = input("Enter Actors: ")
+    directors = input("Enter Director: ")
+    sequel = input("Enter Sequel: ")
+    hitflop = input("Enter ")
+    mymovie = Movie()
 
 if __name__ == "__main__":
     main()
