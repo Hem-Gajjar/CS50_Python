@@ -24,10 +24,12 @@ def main():
 
 
 def select_by_year():
+    year = int(input("Enter the year::"))
     with open("movies.csv","r") as csvfile:
         reader =csv.DictReader(csvfile)
         for row in reader:
-            print(row)
+
+            print(row["title"])
 
 def select_by_genre():
     print("Genre")
