@@ -41,13 +41,14 @@ def select_by_year():
 def select_by_genre():
     genre = input("Enter the genre to search::").capitalize()
     flag = 0
+    count = 1
     with open("movies.csv","r") as csvfile:
         reader =csv.DictReader(csvfile)
         print(f"All movies of {genre} genre")
         for row in reader:
             if(re.search(f".*{genre}.*",row["genre"])):
-                print(row["title"] + f"({row['genre']})")
-
+                print(f"{count}. "+row["title"] + f"({row['genre']})")
+                count += 1
 def select_by_actor():
     print("Actor")
 
