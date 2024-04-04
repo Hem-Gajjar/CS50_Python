@@ -16,7 +16,7 @@ class Movie():
 
     #Here I have used Instance Method
     def addmymovie(self):
-        if(re.search("(tt\d{7})",imdb_id)):
+        if(re.search("(tt[0-9]{7})",imdb_id)):
             myfile = open("movies.csv","a")
             mystring = str(
                 f"\""+self.imdb_id+f"\","
