@@ -27,6 +27,7 @@ def main():
 def select_by_year():
     year = int(input("Enter the year::"))
     flag = 0
+    count = 1
     with open("movies.csv","r") as csvfile:
         reader =csv.DictReader(csvfile)
         print(f"All movies released in year {year}")
@@ -34,6 +35,7 @@ def select_by_year():
             if(int(row["releaseYear"]) == year):
                 flag = 1
                 print(row["title"])
+                count += 1
 
     if flag == 0:
         print(f"We are sorry there are no movies in year {year} in our dataset")
@@ -46,9 +48,14 @@ def select_by_genre():
         reader =csv.DictReader(csvfile)
         print(f"All movies of {genre} genre")
         for row in reader:
-            if(re.search(f".*{genre}.*",row["genre"])):
+            flag = 1
+            if(re.search(f".*{genre}.*",row["genre"])):  # Here I have used regular expression to find if the specified genre exist in the string
                 print(f"{count}. "+row["title"] + f"({row['genre']})")
                 count += 1
+
+    if flag == 0:
+        print(f"We are sorry there are no movies of genre {genre} in our dataset")
+
 def select_by_actor():
     print("Actor")
 
