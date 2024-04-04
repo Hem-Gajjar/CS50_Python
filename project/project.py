@@ -28,7 +28,7 @@ class Movie():
             f"\""+self.actors+f"\","
             f"\""+self.directors+f"\","
             f"\""+self.sequel+f"\","
-            f"\""+self.hitflop+f"\"")
+            f"\""+self.hitflop+f"\"\n")
         x = myfile.write(mystring)
         if (x):
             return True
