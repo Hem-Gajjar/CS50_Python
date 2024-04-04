@@ -1,4 +1,5 @@
 import csv
+import re
 def main():
     while(1):
         choice = 0
@@ -39,7 +40,7 @@ def select_by_year():
 
 def select_by_genre():
     genre = input("Enter the genre to search::")
-    
+    c
 
 def select_by_actor():
     print("Actor")
