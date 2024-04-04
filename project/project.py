@@ -49,7 +49,7 @@ def select_by_genre():
         print(f"All movies of {genre} genre")
         for row in reader:
             flag = 1
-            if(re.search(f".*{genre}.*",row["genre"])):  # Here I have used regular expression to find if the specified genre exist in the string
+            if(re.search(f".*{genre}.*",row["genre"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified genre exist in the string
                 print(f"{count}. "+row["title"] + f"({row['genre']})")
                 count += 1
 
@@ -57,7 +57,20 @@ def select_by_genre():
         print(f"We are sorry there are no movies of genre {genre} in our dataset")
 
 def select_by_actor():
-    print("Actor")
+    actor = input("Enter the actor::").capitalize()
+    flag = 0
+    count = 1
+    with open("movies.csv","r") as csvfile:
+        reader =csv.DictReader(csvfile)
+        print(f"All movies of {actor} actor")
+        for row in reader:
+            flag = 1
+            if(re.search(f".*{actor}.*",row["actor"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified genre exist in the string
+                print(f"{count}. "+row["aco"] + f"({row['genre']})")
+                count += 1
+
+    if flag == 0:
+        print(f"We are sorry there are no movies of actor {actor} in our dataset")
 
 def select_by_director():
     print("Director")
