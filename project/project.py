@@ -1,6 +1,6 @@
 def main():
     choice = 0
-    print(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n()")
+    print(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor")
     match term:
     case pattern-1:
          action-1
