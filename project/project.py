@@ -14,10 +14,15 @@ class Movie():
         self.sequel = sequel
         self.hitflop = hitflop
 
+    #Here I have used Instance Method
     def addmymovie(self):
         myfile = open("movies.csv","a")
         mystring = str(self.imdb_id+","+self.title+","+self.release_year+","+self.release_date+","+self.genre+","+self.writers+","+self.actors+","+self.directors+","+self.sequel+","+self.hitflop)
-        myfile.write(mystring)
+        x = myfile.write(mystring)
+        if (x):
+            return True
+        else:
+            return False
 
 def main():
     while(1):
@@ -126,6 +131,12 @@ def add_movie():
     sequel = input("Enter Sequel: ")
     hitflop = input("Enter Hit-Flop Rating: ")
     mymovie = Movie(imdb_id,title,release_year,release_date,genre,writers,actors,directors,sequel,hitflop)
-    mymovie.addmymovie()
+    x = mymovie.addmymovie()
+    if (x):
+        print("The movie is inserted successfully!")
+    else:
+        print("The movie was not inserted sorry ")
+
+
 if __name__ == "__main__":
     main()
