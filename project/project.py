@@ -134,6 +134,13 @@ def add_movie():
     if not (re.search("(tt[0-9]{7})",imdb_id)): # Used regular expression for correct ID format
         print("Invalid Id Format")
         return
+    flag = False
+    for row in reader:
+            if(re.search(f".*{imdb_id}.*",row["imdb_id"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
+                flag = True
+    if (flag == True):
+        print("Record with same ID exist")
+        return
     title = input("Enter Title: ")
     release_year = input("Enter Release Year: ")
     release_date = input("Enter Release Date (DD MMM YYYY)(28 Jan 2024): ")
