@@ -106,7 +106,6 @@ def select_by_actor():
         reader =csv.DictReader(csvfile)
         print(f"All movies of {actor} actor")
         for row in reader:
-
             if(re.search(f"^{actor}$",row["actors"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified actor exist in the string
                 flag = 1
                 print(f"{count}. "+row["title"] + f"({row['actors']})")
@@ -122,7 +121,7 @@ def select_by_director():
         reader =csv.DictReader(csvfile)
         print(f"All movies of {director} director")
         for row in reader:
-            if(re.search(f".*{director}.*",row["directors"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
+            if(re.search(f"^{director}$",row["directors"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
                 flag = 1
                 print(f"{count}. "+row["title"] + f"({row['directors']})")
                 count += 1
