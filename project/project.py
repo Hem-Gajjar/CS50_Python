@@ -1,3 +1,4 @@
+import csv
 def main():
     while(1):
         choice = 0
@@ -23,7 +24,10 @@ def main():
 
 
 def select_by_year():
-    print("Year")
+    with open("movies.csv","r") as csvfile:
+        reader =csv.DictReader(csvfile)
+        for row in reader:
+            print(row)
 
 def select_by_genre():
     print("Genre")
