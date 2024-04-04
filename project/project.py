@@ -130,19 +130,21 @@ def select_by_director():
         print(f"We are sorry there are no movies of director {director} in our dataset")
 
 def add_movie():
-    imdb_id = input("Enter IMDB Id (ttXXXXXXX)(Here, X=[0-9]): ")
-    if not (re.search("(tt[0-9]{7})",imdb_id)): # Used regular expression for correct ID format
-        print("Invalid Id Format")
-        return
-    flag = False
-    with open("movies.csv","r") as csvfile:
-        reader =csv.DictReader(csvfile)
-        for row in reader:
-                if(re.search(f".*{imdb_id}.*",row["imdbId"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
-                    flag = True
-    if (flag == True):
-        print("Record with same ID exist")
-        return
+    while(1):
+        imdb_id = input("Enter IMDB Id (ttXXXXXXX)(Here, X=[0-9]): ")
+        if not (re.search("(tt[0-9]{7})",imdb_id)): # Used regular expression for correct ID format
+            print("Invalid Id Format")
+            continue
+        flag = False
+        with open("movies.csv","r") as csvfile:
+            reader =csv.DictReader(csvfile)
+            for row in reader:
+                    if(re.search(f".*{imdb_id}.*",row["imdbId"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
+                        flag = True
+        if (flag == True):
+            print("Record with same ID exist")
+            continue
+        break
     title = input("Enter Title: ")
     release_year = input("Enter Release Year: ")
     release_date = input("Enter Release Date (DD MMM YYYY)(28 Jan 2024): ")
