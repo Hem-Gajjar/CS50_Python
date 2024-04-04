@@ -16,7 +16,7 @@ class Movie():
 
     #Here I have used Instance Method
     def addmymovie(self):
-        if(re.search("(tt[0-9]{7})",imdb_id)):
+
             myfile = open("movies.csv","a")
             mystring = str(
                 f"\""+self.imdb_id+f"\","
@@ -34,9 +34,6 @@ class Movie():
                 return True
             else:
                 return False
-        else:
-            print("Invalid ID Format")
-            return False
 def main():
     while(1):
         choice = 0
@@ -133,7 +130,10 @@ def select_by_director():
         print(f"We are sorry there are no movies of director {director} in our dataset")
 
 def add_movie():
-    imdb_id = input("Enter IMDB Id: ")
+    imdb_id = input("Enter IMDB Id (ttXXXXXXX)(Here, X=[0-9]): ")
+    if(re.search("(tt[0-9]{7})",self.imdb_id)):
+        print("Invalid Id Format")
+        return
     title = input("Enter Title: ")
     release_year = input("Enter Release Year: ")
     release_date = input("Enter Release Date (DD MMM YYYY)(28 Jan 2024): ")
