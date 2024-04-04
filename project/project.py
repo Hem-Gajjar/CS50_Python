@@ -17,7 +17,17 @@ class Movie():
     #Here I have used Instance Method
     def addmymovie(self):
         myfile = open("movies.csv","a")
-        mystring = str(self.imdb_id+","+self.title+","+self.release_year+","+self.release_date+","+self.genre+","+self.writers+","+self.actors+","+self.directors+","+self.sequel+","+self.hitflop)
+        mystring = str(
+            f"\""+self.imdb_id+f"\","
+            f"\""+self.title+f"\","
+            f"\""+self.release_year+f"\","
+            f"\""+self.release_date+f"\","
+            f"\""+self.genre+f"\","
+            f"\""+self.writers+f"\","
+            f"\""+self.actors+f"\","
+            f"\""+self.directors+f"\","
+            f"\""+self.sequel+f"\","
+            f"\""+self.hitflop+f"\"")
         x = myfile.write(mystring)
         if (x):
             return True
