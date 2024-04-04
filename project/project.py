@@ -28,8 +28,8 @@ def select_by_year():
     with open("movies.csv","r") as csvfile:
         reader =csv.DictReader(csvfile)
         for row in reader:
-
-            print(row["title"])
+            if(int(row["releaseYear"]) == year):
+                print(row["title"])
 
 def select_by_genre():
     print("Genre")
