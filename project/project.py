@@ -7,6 +7,7 @@ def main():
             choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) Exit\nEnter Choice::"))
         except ValueError:
             print("Invalid Input")
+            continue
         match choice:
             case 1:
                 select_by_year()
@@ -78,21 +79,21 @@ def select_by_actor():
         print(f"We are sorry there are no movies of actor {actor} in our dataset")
 
 def select_by_director():
-    try:
-        director = input("Enter the director::").capitalize()
-        flag = 0
-        count = 1
-        with open("movies.csv","r") as csvfile:
-            reader =csv.DictReader(csvfile)
-            print(f"All movies of {director} director")
-            for row in reader:
-                if(re.search(f".*{director}.*",row["directors"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
-                    flag = 1
-                    print(f"{count}. "+row["title"] + f"({row['directors']})")
-                    count += 1
 
-        if flag == 0:
-            print(f"We are sorry there are no movies of director {director} in our dataset")
+    director = input("Enter the director::").capitalize()
+    flag = 0
+    count = 1
+    with open("movies.csv","r") as csvfile:
+        reader =csv.DictReader(csvfile)
+        print(f"All movies of {director} director")
+        for row in reader:
+            if(re.search(f".*{director}.*",row["directors"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
+                flag = 1
+                print(f"{count}. "+row["title"] + f"({row['directors']})")
+                count += 1
+
+    if flag == 0:
+        print(f"We are sorry there are no movies of director {director} in our dataset")
 
 
 
