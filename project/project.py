@@ -4,7 +4,7 @@ def main():
     while(1):
         choice = 0
         try:
-            choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) Exit\nEnter Choice::"))
+            choice = int(input(f"Select Choice\n(1) Select Movie By Year\n(2) Select Movie By Genre\n(3) Select Movie By Actor\n(4) Select Movie By Director\n(5) To clear screen\n(6) Exit\nEnter Choice::"))
         except ValueError:
             print("Invalid Input")
             continue
@@ -21,7 +21,7 @@ def main():
             case 4:
                 select_by_director()
 
-            case 5:
+            case 6:
                 break
 
             case _:
