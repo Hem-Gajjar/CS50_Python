@@ -73,7 +73,21 @@ def select_by_actor():
         print(f"We are sorry there are no movies of actor {actor} in our dataset")
 
 def select_by_director():
-    print("Director")
+    director = input("Enter the director::").capitalize()
+    flag = 0
+    count = 1
+    with open("movies.csv","r") as csvfile:
+        reader =csv.DictReader(csvfile)
+        print(f"All movies of {director} director")
+        for row in reader:
+            flag = 1
+            if(re.search(f".*{director}.*",row["directors"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified director exist in the string
+                print(f"{count}. "+row["title"] + f"({row['directors']})")
+                count += 1
+
+    if flag == 0:
+        print(f"We are sorry there are no movies of actor {director} in our dataset")
+
 
 
 
