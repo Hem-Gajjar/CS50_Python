@@ -39,13 +39,14 @@ def select_by_year():
         print(f"We are sorry there are no movies in year {year} in our dataset")
 
 def select_by_genre():
-    genre = input("Enter the genre to search::")
+    genre = input("Enter the genre to search::").capitalize()
     flag = 0
     with open("movies.csv","r") as csvfile:
         reader =csv.DictReader(csvfile)
         print(f"All movies of {genre} genre")
         for row in reader:
-            
+            if(re.search(f".*{genre}.*",row["genre"])):
+                print(row["title"] + f"({genre})")
 
 def select_by_actor():
     print("Actor")
