@@ -17,23 +17,23 @@ class Movie():
     #Here I have used Instance Method
     def addmymovie(self):
 
-            myfile = open("movies.csv","a")
-            mystring = str(
-                f"\""+self.imdb_id+f"\","
-                f"\""+self.title+f"\","
-                f"\""+self.release_year+f"\","
-                f"\""+self.release_date+f"\","
-                f"\""+self.genre+f"\","
-                f"\""+self.writers+f"\","
-                f"\""+self.actors+f"\","
-                f"\""+self.directors+f"\","
-                f"\""+self.sequel+f"\","
-                f"\""+self.hitflop+f"\"")
-            x = myfile.write(mystring)
-            if (x):
-                return True
-            else:
-                return False
+        myfile = open("movies.csv","a")
+        mystring = str(
+            f"\""+self.imdb_id+f"\","
+            f"\""+self.title+f"\","
+            f"\""+self.release_year+f"\","
+            f"\""+self.release_date+f"\","
+            f"\""+self.genre+f"\","
+            f"\""+self.writers+f"\","
+            f"\""+self.actors+f"\","
+            f"\""+self.directors+f"\","
+            f"\""+self.sequel+f"\","
+            f"\""+self.hitflop+f"\"")
+        x = myfile.write(mystring)
+        if (x):
+            return True
+        else:
+            return False
 def main():
     while(1):
         choice = 0
@@ -131,7 +131,7 @@ def select_by_director():
 
 def add_movie():
     imdb_id = input("Enter IMDB Id (ttXXXXXXX)(Here, X=[0-9]): ")
-    if(re.search("(tt[0-9]{7})",self.imdb_id)):
+    if(re.search("(tt[0-9]{7})",imdb_id)):
         print("Invalid Id Format")
         return
     title = input("Enter Title: ")
