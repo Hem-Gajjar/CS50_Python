@@ -152,8 +152,13 @@ def add_movie():
             print("Incorrect year format")
             continue
         break
-    
-    release_date = input("Enter Release Date (DD MMM YYYY)(28 Jan 2024): ")
+
+    while(1):
+        release_date = input("Enter Release Date (DD MMM YYYY)(28 Jan 2024): ")
+        if not(re.search("([0-9]{2} [a-zA-Z]{3} [0-9]{4})",release_date)):
+            print("Incorrect year format")
+            continue
+        break
     genre = input("Enter Genre: ")
     writers = input("Enter Writer: ")
     actors = input("Enter Actors: ")
