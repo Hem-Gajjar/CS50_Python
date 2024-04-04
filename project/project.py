@@ -27,6 +27,7 @@ def select_by_year():
     year = int(input("Enter the year::"))
     with open("movies.csv","r") as csvfile:
         reader =csv.DictReader(csvfile)
+        print(f"All movies released in year {year}")
         for row in reader:
             if(int(row["releaseYear"]) == year):
                 print(row["title"])
