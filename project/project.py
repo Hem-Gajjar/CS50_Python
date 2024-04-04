@@ -3,16 +3,19 @@ import re
 import os
 class Movie():
     def __init__(self,imdb_id,title,release_year,release_date,genre,writers,actors,directors,sequel,hitflop):
-        imdb_id = self.imdb
-        title = self.title
-        release_year = self.release_year
-        release_date = self.release_date
-        genre = self.genre
-        writers = self.writers
-        actors = self.actors
-        directors = self.directors
-        sequel = self.sequel
-        hitflop = self.hitflop
+        self.imdb_id = imdb_id
+        self.title = title
+        self.release_year = release_year
+        self.release_date = release_date
+        self.genre = genre
+        self.writers = writers
+        self.actors = actors
+        self.directors = directors
+        self.sequel = sequel
+        self.hitflop = hitflop
+
+    def addmymovie(self):
+        
 
 def main():
     while(1):
