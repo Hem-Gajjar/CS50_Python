@@ -107,7 +107,7 @@ def select_by_actor():
         print(f"All movies of {actor} actor")
         for row in reader:
 
-            if(re.search(f".*{actor}.*",row["actors"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified actor exist in the string
+            if(re.search(f"{actor}",row["actors"],re.IGNORECASE)):  # Here I have used regular expression to find if the specified actor exist in the string
                 flag = 1
                 print(f"{count}. "+row["title"] + f"({row['actors']})")
                 count += 1
