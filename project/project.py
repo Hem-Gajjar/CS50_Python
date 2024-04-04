@@ -56,7 +56,8 @@ def main():
                 select_by_actor(actor)
 
             case 4:
-                select_by_director()
+                director = input("Enter the director (Firstname Lastname)::").capitalize()
+                select_by_director(director)
 
             case 5:
                 os.system('clear')
@@ -124,8 +125,8 @@ def select_by_actor(actor):
     else:
         return True
 
-def select_by_director():
-    director = input("Enter the director (Firstname Lastname)::").capitalize()
+def select_by_director(director):
+
     flag = 0
     count = 1
     with open("movies.csv","r") as csvfile:
